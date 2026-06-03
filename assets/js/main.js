@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQs();
   initActiveNavLink();
   initFooterStatus();
+  initHeroSlider();
 });
 
 /* --- Sticky Header --- */
@@ -188,4 +189,91 @@ function initFooterStatus() {
   
   // Laxmi Hospital is open 24/7/365, so we reflect that with absolute certitude
   statusBadge.innerHTML = '<span class="open">● Open 24 Hours (Everyday)</span>';
+}
+
+/* --- Hero Image Slider --- */
+function initHeroSlider() {
+  const slider = document.querySelector('.hero-slider');
+  if (!slider) return;
+
+  const slides = slider.querySelectorAll('.hero-slide');
+  const dots = slider.querySelectorAll('.dot');
+  const prevBtn = slider.querySelector('.hero-slider-arrow.prev');
+  const nextBtn = slider.querySelector('.hero-slider-arrow.next');
+
+  if (slides.length === 0) return;
+
+  let currentIndex = 0;
+  let autoplayTimer = null;
+  const slideInterval = 5000; // 5 seconds
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    slides[index].classList.add('active');
+    if (dots[index]) {
+      dots[index].classList.add('active');
+    }
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    let nextIndex = (currentIndex + 1) % slides.length;
+    showSlide(nextIndex);
+  }
+
+  function prevSlide() {
+    let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(prevIndex);
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(nextSlide, slideInterval);
+  }
+
+  function stopAutoplay() {
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+  }
+
+  function handleManualChange(action) {
+    stopAutoplay();
+    action();
+    startAutoplay();
+  }
+
+  // Click listeners for dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      handleManualChange(() => showSlide(index));
+    });
+  });
+
+  // Click listeners for arrows
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => {
+      handleManualChange(prevSlide);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      handleManualChange(nextSlide);
+    });
+  }
+
+  // Initialize slider and start autoplay
+  showSlide(0);
+  startAutoplay();
+  
+  // Pause autoplay when tab is inactive to save resources
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopAutoplay();
+    } else {
+      startAutoplay();
+    }
+  });
 }

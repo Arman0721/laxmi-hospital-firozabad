@@ -172,62 +172,31 @@
       </div>
       
       <div class="hero-image-container">
-        <!-- High-fidelity custom SVG mockup reflecting premium healthcare environment -->
-        <svg viewBox="0 0 500 400" width="100%" class="hero-main-img" style="background:#EBF4FC; border-radius:var(--radius-lg);">
-          <!-- Background grids -->
-          <defs>
-            <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#0B4F93" />
-              <stop offset="100%" stop-color="#1E40AF" />
-            </linearGradient>
-            <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#10B981" />
-              <stop offset="100%" stop-color="#059669" />
-            </linearGradient>
-          </defs>
-          <!-- Grid mesh -->
-          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#D1FAE5" stroke-width="0.5"/>
-          </pattern>
-          <rect width="100%" height="100%" fill="url(#grid)" />
+        <!-- Premium Auto-playing Banners Slider -->
+        <div class="hero-slider">
+          <div class="hero-slides">
+            <div class="hero-slide active">
+              <img src="assets/images/slide-nephrology.png" alt="Advanced Nephrology Care" class="hero-slide-img" loading="eager">
+            </div>
+            <div class="hero-slide">
+              <img src="assets/images/slide-cardiac.png" alt="Advanced Cardiac Care" class="hero-slide-img" loading="lazy">
+            </div>
+            <div class="hero-slide">
+              <img src="assets/images/slide-cancer.png" alt="Compassionate Cancer Care" class="hero-slide-img" loading="lazy">
+            </div>
+          </div>
           
-          <!-- Hospital building representation -->
-          <rect x="50" y="80" width="400" height="280" rx="16" fill="#FFFFFF" filter="drop-shadow(0px 8px 16px rgba(11, 79, 147, 0.1))"/>
-          <rect x="50" y="80" width="400" height="15" fill="url(#blueGrad)" rx="8"/>
-          <!-- Windows -->
-          <rect x="80" y="120" width="60" height="40" rx="4" fill="#F1F5F9" />
-          <rect x="170" y="120" width="60" height="40" rx="4" fill="#F1F5F9" />
-          <rect x="260" y="120" width="60" height="40" rx="4" fill="#F1F5F9" />
-          <rect x="350" y="120" width="60" height="40" rx="4" fill="#F1F5F9" />
+          <!-- Slider Navigation Dots -->
+          <div class="hero-slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
 
-          <rect x="80" y="180" width="60" height="40" rx="4" fill="#F1F5F9" />
-          <rect x="170" y="180" width="60" height="40" rx="4" fill="#F1F5F9" />
-          <rect x="260" y="180" width="60" height="40" rx="4" fill="#F1F5F9" />
-          <rect x="350" y="180" width="60" height="40" rx="4" fill="#F1F5F9" />
-
-          <!-- Main gate doors -->
-          <rect x="210" y="260" width="80" height="100" rx="8" fill="#E2E8F0"/>
-          <rect x="215" y="260" width="35" height="100" fill="#0B4F93" opacity="0.8"/>
-          <rect x="250" y="260" width="35" height="100" fill="#0B4F93" opacity="0.8"/>
-          
-          <!-- Red cross emblem -->
-          <circle cx="250" cy="50" r="24" fill="#EF4444" />
-          <rect x="246" y="38" width="8" height="24" fill="#FFFFFF" rx="2" />
-          <rect x="238" y="46" width="24" height="8" fill="#FFFFFF" rx="2" />
-          
-          <!-- Modern dynamic ambulance graphic -->
-          <g transform="translate(320, 260)">
-            <rect x="0" y="30" width="120" height="50" rx="8" fill="#FFFFFF" stroke="#0B4F93" stroke-width="2" filter="drop-shadow(0px 4px 8px rgba(0,0,0,0.1))"/>
-            <path d="M90 30 L110 50 L110 80 L90 80 Z" fill="#0B4F93"/>
-            <circle cx="25" cy="80" r="12" fill="#1E293B"/>
-            <circle cx="95" cy="80" r="12" fill="#1E293B"/>
-            <rect x="40" y="45" width="40" height="8" fill="#EF4444" rx="2"/>
-            <text x="45" y="52" fill="#FFFFFF" font-size="6" font-weight="900" font-family="sans-serif">AMBULANCE</text>
-            <circle cx="100" cy="24" r="6" fill="#EF4444" opacity="0.8">
-              <animate attributeName="opacity" values="0.2;1;0.2" dur="1s" repeatCount="indefinite" />
-            </circle>
-          </g>
-        </svg>
+          <!-- Slider Navigation Arrows -->
+          <button class="hero-slider-arrow prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+          <button class="hero-slider-arrow next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
 
         <!-- Floating indicators -->
         <div class="hero-card-floating hero-card-1">
