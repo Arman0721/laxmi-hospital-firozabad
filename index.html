@@ -137,82 +137,65 @@
   </header>
 
   <!-- 1. HERO SECTION -->
-  <section class="hero">
-    <div class="container hero-wrapper">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <div class="hero-badge-dot"></div>
-          24x7 LEVEL-1 TRAUMA & EMERGENCY MEDICAL SERVICES
-        </div>
-        <h1 class="hero-title">Your Health, Our Mission. <span>Laxmi Hospital Firozabad</span></h1>
-        <p class="hero-subtitle">Bringing world-class healthcare, advanced clinical surgeries, and compassionate pediatric & gynecological experts to the heart of Firozabad.</p>
-        
-        <div class="hero-actions">
-          <a href="#appointment" class="btn btn-primary"><i class="far fa-calendar-check"></i> Book Online Appointment</a>
-          <a href="tel:+919999988888" class="btn btn-emergency"><i class="fas fa-phone-alt"></i> Call Emergency 24/7</a>
-          <a href="https://wa.me/919999999999?text=Hello%20Laxmi%20Hospital%2C%20I%20want%20to%20inquire%20about%20OPD%20timings." target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-        </div>
+  <section class="hero-slider-section">
+    <!-- Screen Reader Only H1 for Local SEO -->
+    <h1 class="sr-only">Laxmi Multi-Speciality Hospital Firozabad - Best Healthcare Services</h1>
 
-        <div class="hero-highlights">
-          <div class="hero-highlight-item">
-            <div class="hero-highlight-icon"><i class="fas fa-ambulance"></i></div>
-            <div class="hero-highlight-text">
-              <h5>Ambulance Pickup</h5>
-              <p>GPS Tracked Fleet</p>
-            </div>
-          </div>
-          <div class="hero-highlight-item">
-            <div class="hero-highlight-icon"><i class="fas fa-shield-alt"></i></div>
-            <div class="hero-highlight-text">
-              <h5>Cashless Treatment</h5>
-              <p>All Major TPA Active</p>
-            </div>
-          </div>
+    <div class="hero-slider-container">
+      <div class="hero-slides">
+        <div class="hero-slide active">
+          <img src="assets/images/slide-nephrology.png" alt="Advanced Nephrology Care" class="hero-slide-img" loading="eager">
+        </div>
+        <div class="hero-slide">
+          <img src="assets/images/slide-cardiac.png" alt="Advanced Cardiac Care" class="hero-slide-img" loading="lazy">
+        </div>
+        <div class="hero-slide">
+          <img src="assets/images/slide-cancer.png" alt="Compassionate Cancer Care" class="hero-slide-img" loading="lazy">
         </div>
       </div>
       
-      <div class="hero-image-container">
-        <!-- Premium Auto-playing Banners Slider -->
-        <div class="hero-slider">
-          <div class="hero-slides">
-            <div class="hero-slide active">
-              <img src="assets/images/slide-nephrology.png" alt="Advanced Nephrology Care" class="hero-slide-img" loading="eager">
-            </div>
-            <div class="hero-slide">
-              <img src="assets/images/slide-cardiac.png" alt="Advanced Cardiac Care" class="hero-slide-img" loading="lazy">
-            </div>
-            <div class="hero-slide">
-              <img src="assets/images/slide-cancer.png" alt="Compassionate Cancer Care" class="hero-slide-img" loading="lazy">
-            </div>
-          </div>
-          
-          <!-- Slider Navigation Dots -->
-          <div class="hero-slider-dots">
-            <span class="dot active" data-slide="0"></span>
-            <span class="dot" data-slide="1"></span>
-            <span class="dot" data-slide="2"></span>
-          </div>
+      <!-- Slider Navigation Dots -->
+      <div class="hero-slider-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+      </div>
 
-          <!-- Slider Navigation Arrows -->
-          <button class="hero-slider-arrow prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
-          <button class="hero-slider-arrow next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
-        </div>
+      <!-- Slider Navigation Arrows -->
+      <button class="hero-slider-arrow prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+      <button class="hero-slider-arrow next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+    </div>
 
-        <!-- Floating indicators -->
-        <div class="hero-card-floating hero-card-1">
-          <div class="hero-card-icon"><i class="fas fa-heartbeat"></i></div>
-          <div class="hero-card-info">
-            <h4>Live ICU Monitoring</h4>
-            <p>Dr. R.K. Sharma Supervising</p>
-          </div>
-        </div>
+    <!-- Quick Action Floating Bar overlaying the bottom -->
+    <div class="hero-quick-actions">
+      <div class="container">
+        <div class="quick-actions-wrapper">
+          <a href="appointment.html" class="quick-action-card appointment">
+            <div class="card-icon"><i class="far fa-calendar-check"></i></div>
+            <div class="card-text">
+              <h3>Book Appointment</h3>
+              <p>10 mins average wait</p>
+            </div>
+            <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
 
-        <div class="hero-card-floating hero-card-2">
-          <div class="hero-card-icon"><i class="fas fa-user-md"></i></div>
-          <div class="hero-card-info">
-            <h4>OPD Booking active</h4>
-            <p>10 mins average wait</p>
-          </div>
+          <a href="tel:+919999988888" class="quick-action-card emergency">
+            <div class="card-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="card-text">
+              <h3>24/7 Emergency Line</h3>
+              <p>Call: +91 99999 88888</p>
+            </div>
+            <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://wa.me/919999999999?text=Hello%20Laxmi%20Hospital%2C%20I%20want%20to%20inquire%20about%20OPD%20timings." target="_blank" class="quick-action-card whatsapp">
+            <div class="card-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="card-text">
+              <h3>Chat on WhatsApp</h3>
+              <p>Instant OPD inquiries</p>
+            </div>
+            <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
         </div>
       </div>
     </div>

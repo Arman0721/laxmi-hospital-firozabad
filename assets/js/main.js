@@ -193,7 +193,7 @@ function initFooterStatus() {
 
 /* --- Hero Image Slider --- */
 function initHeroSlider() {
-  const slider = document.querySelector('.hero-slider');
+  const slider = document.querySelector('.hero-slider-container');
   if (!slider) return;
 
   const slides = slider.querySelectorAll('.hero-slide');
