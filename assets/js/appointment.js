@@ -6,7 +6,6 @@
 // Mapping of Departments to Doctors (dynamically resolved from localStorage or fallbacks)
 const DEFAULT_DEPT_DOCTORS = {
   "General Medicine": [
-    { id: "dr-r-k-sharma", name: "Dr. R. K. Sharma (M.D. Medicine)" },
     { id: "dr-piyush-taneja", name: "Dr. Piyush Taneja (M.B.B.S., M.D. Medicine)" }
   ],
   "Gynecology": [
@@ -27,7 +26,6 @@ const DEFAULT_DEPT_DOCTORS = {
     { id: "dr-sachin-tiwari", name: "Dr. Sachin Tiwari (Consultant Intensivist)" }
   ],
   "ICU": [
-    { id: "dr-r-k-sharma", name: "Dr. R. K. Sharma (Critical Care Specialist)" },
     { id: "dr-piyush-taneja", name: "Dr. Piyush Taneja (Consultant Physician)" },
     { id: "dr-sachin-tiwari", name: "Dr. Sachin Tiwari (Consultant Anesthesiologist & Intensivist)" }
   ],
@@ -37,13 +35,13 @@ const DEFAULT_DEPT_DOCTORS = {
     { id: "dr-sachin-tiwari", name: "Dr. Sachin Tiwari (Consultant Intensivist)" }
   ],
   "Cardiology": [
-    { id: "dr-r-k-sharma", name: "Dr. R. K. Sharma (Consultant Cardiologist)" }
+    { id: "dr-piyush-taneja", name: "Dr. Piyush Taneja (M.B.B.S., M.D. Medicine - Cardiology Consult)" }
   ],
   "Neurology": [
-    { id: "dr-r-k-sharma", name: "Dr. R. K. Sharma (Medicine Specialist)" }
+    { id: "dr-piyush-taneja", name: "Dr. Piyush Taneja (M.B.B.S., M.D. Medicine - Neurology Consult)" }
   ],
   "ENT": [
-    { id: "dr-sunita-khandelwal", name: "Dr. Sunita Khandelwal (M.S. ENT)" }
+    { id: "dr-ajay-bahadur-singh", name: "Dr. Ajay Bahadur Singh (M.S. General Surgery - ENT Surgery Consult)" }
   ],
   "Physiotherapy": [
     { id: "dr-amit-gupta", name: "Dr. Amit Gupta (Supervising Joint Surgeon)" }

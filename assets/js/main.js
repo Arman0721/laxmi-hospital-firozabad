@@ -970,16 +970,6 @@ function initDoctorsCarousel() {
 function initDynamicContent() {
   const defaultDoctors = [
     {
-      id: "dr-r-k-sharma",
-      name: "Dr. R. K. Sharma",
-      tag: "Chief Cardiologist",
-      spec: "General Medicine & Cardiology",
-      qual: "M.D. Medicine, M.R.C.P (London)",
-      exp: "18+ Years of Experience",
-      image: "assets/images/dr-r-k-sharma.png",
-      departments: ["General Medicine", "Cardiology", "ICU", "Neurology"]
-    },
-    {
       id: "dr-lata-rajput",
       name: "Dr. Lata Rajput",
       tag: "Senior Gynecologist",
@@ -1018,16 +1008,6 @@ function initDynamicContent() {
       exp: "14+ Years of Experience",
       image: "assets/images/dr-ajay-bahadur-singh.jpg",
       departments: ["General Surgery"]
-    },
-    {
-      id: "dr-sunita-khandelwal",
-      name: "Dr. Sunita Khandelwal",
-      tag: "ENT Specialist",
-      spec: "ENT & Head-Neck Surgery",
-      qual: "M.S. ENT, D.L.O",
-      exp: "11+ Years of Experience",
-      image: "assets/images/dr-sunita-khandelwal.png",
-      departments: ["ENT"]
     },
     {
       id: "dr-mohammad-shafiq",
@@ -1116,8 +1096,8 @@ function initDynamicContent() {
     {
       id: "dengue-symptoms",
       title: "Dengue Symptoms, Prevention & Platelet Management",
-      authorId: "dr-r-k-sharma",
-      authorName: "Dr. R. K. Sharma",
+      authorId: "dr-piyush-taneja",
+      authorName: "Dr. Piyush Taneja",
       date: "2026-06-01",
       tag: "General Medicine",
       image: "assets/images/blog-dengue.png",
@@ -1155,8 +1135,8 @@ function initDynamicContent() {
     {
       id: "diabetes-management",
       title: "Diabetes Management: HbA1c Control & Nutrition",
-      authorId: "dr-r-k-sharma",
-      authorName: "Dr. R. K. Sharma",
+      authorId: "dr-piyush-taneja",
+      authorName: "Dr. Piyush Taneja",
       date: "2026-05-10",
       tag: "General Medicine",
       image: "assets/images/blog-diabetes.png",
@@ -1168,8 +1148,8 @@ function initDynamicContent() {
     {
       id: "heart-care-tips",
       title: "Preventive Heart Care Tips: Exercise & Stress Control",
-      authorId: "dr-r-k-sharma",
-      authorName: "Dr. R. K. Sharma",
+      authorId: "dr-piyush-taneja",
+      authorName: "Dr. Piyush Taneja",
       date: "2026-05-02",
       tag: "Cardiology",
       image: "assets/images/blog-heart.png",
@@ -1325,12 +1305,7 @@ function initDynamicContent() {
         image: "assets/images/dr-lata-rajput.jpg?v=1.0.1",
         departments: ["Gynecology"]
       };
-      const sharmaIndex = doctorsList.findIndex(d => d.id === 'dr-r-k-sharma');
-      if (sharmaIndex !== -1) {
-        doctorsList.splice(sharmaIndex + 1, 0, lata);
-      } else {
-        doctorsList.unshift(lata);
-      }
+      doctorsList.unshift(lata);
       docListModified = true;
     }
 
@@ -1614,7 +1589,7 @@ function initDynamicContent() {
   const docsCarouselTrack = document.querySelector('.docs-carousel-track');
   if (docsCarouselTrack) {
     docsCarouselTrack.innerHTML = '';
-    const defaultDocIds = ["dr-r-k-sharma", "dr-lata-rajput", "dr-amit-gupta", "dr-paras-rajput", "dr-ajay-bahadur-singh", "dr-sunita-khandelwal", "dr-mohammad-shafiq", "dr-piyush-taneja", "dr-sachin-tiwari", "dr-premraj"];
+    const defaultDocIds = ["dr-lata-rajput", "dr-amit-gupta", "dr-paras-rajput", "dr-ajay-bahadur-singh", "dr-mohammad-shafiq", "dr-piyush-taneja", "dr-sachin-tiwari", "dr-premraj"];
 
     doctorsList.forEach(doc => {
       const isDefaultDoc = defaultDocIds.includes(doc.id);
@@ -1652,7 +1627,7 @@ function initDynamicContent() {
   const docsGrid = document.querySelector('.docs-grid');
   if (docsGrid) {
     docsGrid.innerHTML = '';
-    const defaultDocIds = ["dr-r-k-sharma", "dr-lata-rajput", "dr-amit-gupta", "dr-paras-rajput", "dr-ajay-bahadur-singh", "dr-sunita-khandelwal", "dr-mohammad-shafiq", "dr-piyush-taneja", "dr-sachin-tiwari", "dr-premraj"];
+    const defaultDocIds = ["dr-lata-rajput", "dr-amit-gupta", "dr-paras-rajput", "dr-ajay-bahadur-singh", "dr-mohammad-shafiq", "dr-piyush-taneja", "dr-sachin-tiwari", "dr-premraj"];
 
     doctorsList.forEach(doc => {
       const isDefaultDoc = defaultDocIds.includes(doc.id);

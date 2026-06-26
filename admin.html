@@ -524,7 +524,7 @@
           <div class="admin-input-group" style="margin-bottom: 12px;">
             <label class="admin-input-label">Clinician Photo *</label>
             <div class="img-upload-preview-box">
-              <img id="doctor-img-preview" src="assets/images/dr-r-k-sharma.png" alt="Avatar Preview" class="img-upload-preview" loading="lazy" decoding="async">
+              <img id="doctor-img-preview" src="assets/images/dr-piyush-taneja.jpg" alt="Avatar Preview" class="img-upload-preview" loading="lazy" decoding="async">
               <div class="img-upload-input-wrap">
                 <input type="text" id="doctor-img-url" class="admin-input-field" placeholder="Paste Image URL or select preset below" style="margin-bottom: 8px;">
                 <input type="file" id="doctor-img-file" accept="image/*" class="admin-input-field" style="padding: 8px 12px; font-size: 0.8rem;" onchange="handleImageUpload(event)">
@@ -533,12 +533,10 @@
             
             <label class="admin-input-label" style="font-size: 0.72rem; color: var(--text-muted);">Choose Preset Avatar Quick Option</label>
             <div class="preset-avatars-grid">
-              <img src="assets/images/dr-r-k-sharma.png" class="preset-avatar-option" onclick="selectPresetAvatar('assets/images/dr-r-k-sharma.png', this)" loading="lazy" decoding="async">
               <img src="assets/images/dr-lata-rajput.jpg?v=1.0.1" class="preset-avatar-option" onclick="selectPresetAvatar('assets/images/dr-lata-rajput.jpg?v=1.0.1', this)" loading="lazy" decoding="async">
               <img src="assets/images/dr-amit-gupta.png" class="preset-avatar-option" onclick="selectPresetAvatar('assets/images/dr-amit-gupta.png', this)" loading="lazy" decoding="async">
               <img src="assets/images/dr-paras-rajput.jpg?v=1.0.1" class="preset-avatar-option" onclick="selectPresetAvatar('assets/images/dr-paras-rajput.jpg?v=1.0.1', this)" loading="lazy" decoding="async">
               <img src="assets/images/dr-ajay-bahadur-singh.jpg" class="preset-avatar-option" onclick="selectPresetAvatar('assets/images/dr-ajay-bahadur-singh.jpg', this)" loading="lazy" decoding="async">
-              <img src="assets/images/dr-sunita-khandelwal.png" class="preset-avatar-option" onclick="selectPresetAvatar('assets/images/dr-sunita-khandelwal.png', this)" loading="lazy" decoding="async">
               <img src="assets/images/dr-mohammad-shafiq.jpg?v=1.0.1" class="preset-avatar-option" onclick="selectPresetAvatar('assets/images/dr-mohammad-shafiq.jpg?v=1.0.1', this)" loading="lazy" decoding="async">
               <img src="assets/images/dr-piyush-taneja.jpg" class="preset-avatar-option" onclick="selectPresetAvatar('assets/images/dr-piyush-taneja.jpg', this)" loading="lazy" decoding="async">
               <img src="assets/images/dr-sachin-tiwari.jpg" class="preset-avatar-option" onclick="selectPresetAvatar('assets/images/dr-sachin-tiwari.jpg', this)" loading="lazy" decoding="async">
@@ -951,16 +949,6 @@
     // Seed Template Data for Clinicians
     const defaultDoctors = [
       {
-        id: "dr-r-k-sharma",
-        name: "Dr. R. K. Sharma",
-        tag: "Chief Cardiologist",
-        spec: "General Medicine & Cardiology",
-        qual: "M.D. Medicine, M.R.C.P (London)",
-        exp: "18+ Years of Experience",
-        image: "assets/images/dr-r-k-sharma.png",
-        departments: ["General Medicine", "Cardiology", "ICU", "Neurology"]
-      },
-      {
         id: "dr-lata-rajput",
         name: "Dr. Lata Rajput",
         tag: "Senior Gynecologist",
@@ -999,16 +987,6 @@
         exp: "14+ Years of Experience",
         image: "assets/images/dr-ajay-bahadur-singh.jpg",
         departments: ["General Surgery"]
-      },
-      {
-        id: "dr-sunita-khandelwal",
-        name: "Dr. Sunita Khandelwal",
-        tag: "ENT Specialist",
-        spec: "ENT & Head-Neck Surgery",
-        qual: "M.S. ENT, D.L.O",
-        exp: "11+ Years of Experience",
-        image: "assets/images/dr-sunita-khandelwal.png",
-        departments: ["ENT"]
       },
       {
         id: "dr-mohammad-shafiq",
@@ -1099,8 +1077,8 @@
       {
         id: "dengue-symptoms",
         title: "Dengue Symptoms, Prevention & Platelet Management",
-        authorId: "dr-r-k-sharma",
-        authorName: "Dr. R. K. Sharma",
+        authorId: "dr-piyush-taneja",
+        authorName: "Dr. Piyush Taneja",
         date: "2026-06-01",
         tag: "General Medicine",
         image: "assets/images/blog-dengue.png",
@@ -1138,8 +1116,8 @@
       {
         id: "diabetes-management",
         title: "Diabetes Management: HbA1c Control & Nutrition",
-        authorId: "dr-r-k-sharma",
-        authorName: "Dr. R. K. Sharma",
+        authorId: "dr-piyush-taneja",
+        authorName: "Dr. Piyush Taneja",
         date: "2026-05-10",
         tag: "General Medicine",
         image: "assets/images/blog-diabetes.png",
@@ -1151,8 +1129,8 @@
       {
         id: "heart-care-tips",
         title: "Preventive Heart Care Tips: Exercise & Stress Control",
-        authorId: "dr-r-k-sharma",
-        authorName: "Dr. R. K. Sharma",
+        authorId: "dr-piyush-taneja",
+        authorName: "Dr. Piyush Taneja",
         date: "2026-05-02",
         tag: "Cardiology",
         image: "assets/images/blog-heart.png",
@@ -1278,12 +1256,7 @@
               image: "assets/images/dr-lata-rajput.jpg?v=1.0.1",
               departments: ["Gynecology"]
             };
-            const sharmaIdx = doctors.findIndex(d => d.id === 'dr-r-k-sharma');
-            if (sharmaIdx !== -1) {
-              doctors.splice(sharmaIdx + 1, 0, lata);
-            } else {
-              doctors.unshift(lata);
-            }
+            doctors.unshift(lata);
             modified = true;
           }
 
@@ -2018,7 +1991,7 @@
       document.getElementById('doctor-exp').value = '';
       document.getElementById('doctor-img-url').value = '';
       document.getElementById('doctor-img-file').value = '';
-      document.getElementById('doctor-img-preview').src = 'assets/images/dr-r-k-sharma.png';
+      document.getElementById('doctor-img-preview').src = 'assets/images/dr-piyush-taneja.jpg';
 
       // Reset Preset Border selections
       resetPresetBorders();
@@ -2601,7 +2574,7 @@
         let image = document.getElementById('doctor-img-url').value.trim();
 
         if (!image) {
-          image = 'assets/images/dr-r-k-sharma.png'; // default fallback
+          image = 'assets/images/dr-piyush-taneja.jpg'; // default fallback
         }
 
         // Get selected departments

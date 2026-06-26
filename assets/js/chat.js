@@ -26,8 +26,8 @@ const CHAT_KEYWORDS = {
   orthopedic: "🦴 <strong>ORTHOPEDICS & TRAUMA:</strong><br>Led by <strong>Dr. Amit Gupta (M.S. Ortho)</strong> and <strong>Dr. Mohammad Shafiq (M.S. Ortho)</strong>. We specialize in joint replacement, complex fracture repairs, arthritis management, and spine surgery.",
   pediatric: "👶 <strong>PEDIATRIC CARE:</strong><br>Led by child specialist <strong>Dr. Paras Rajput (M.D. Pediatrics)</strong>. Offers newborn checks, immunizations, and asthma care. View child health tips in our blog <a href='blog/child-health-tips.html' style='color:var(--primary);text-decoration:underline;font-weight:700;'>here</a>.",
   surgery: "🔪 <strong>GENERAL & LAPAROSCOPIC SURGERY:</strong><br>Led by <strong>Dr. Ajay Bahadur Singh (M.S. General Surgery)</strong>, senior specialist in minimally invasive gallbladder, hernia, appendix, and gastrointestinal surgeries.",
-  cardiology: "❤️ <strong>CARDIOLOGY & MEDICINE:</strong><br>Led by chief cardiologist <strong>Dr. R. K. Sharma (M.D. Medicine, M.R.C.P London)</strong>, specializing in cardiac management, hypertension, diabetic care, and ICU management.",
-  ent: "👂 <strong>ENT SPECIALIST:</strong><br>Led by <strong>Dr. Sunita Khandelwal (M.S. ENT)</strong>, treating ear, nose, throat disorders, and head-neck surgeries.",
+  cardiology: "❤️ <strong>CARDIOLOGY & MEDICINE:</strong><br>Led by our Senior Consultant Physicians, specializing in cardiac management, hypertension, diabetic care, and ICU management.",
+  ent: "👂 <strong>ENT SPECIALIST:</strong><br>Our ENT specialist clinic treats ear, nose, throat disorders, and head-neck surgeries.",
   timing: "⏰ <strong>OPD & HOSPITAL TIMINGS:</strong><br>• <strong>General OPD:</strong> 9:00 AM to 8:00 PM (Monday - Saturday)<br>• <strong>Emergency & ICU:</strong> Open 24/7/365<br>• <strong>Diagnostic Lab & Radiology:</strong> 8:00 AM to 8:00 PM (Emergency 24x7).",
   insurance: "💳 <strong>CASHLESS INSURANCE & TPA:</strong><br>We offer cashless treatment with all major insurance providers: Star Health, HDFC Ergo, ICICI Lombard, SBI General, Bajaj Allianz, Niva Bupa, and various govt. schemes. Bring your TPA card to the admin desk on admission.",
   location: "📍 <strong>ADDRESS & DIRECTIONS:</strong><br>Laxmi Hospital is situated at: <strong>Nagla Bari, Firozabad, Uttar Pradesh</strong>. Easily accessible via bypass road. Check our <a href='contact.html' style='color:var(--primary);text-decoration:underline;font-weight:700;'>Contact Page</a> for map routing.",
@@ -185,12 +185,10 @@ function getDoctorsFromStorage() {
     console.error("Error reading doctors from localStorage:", e);
   }
   return [
-    { id: "dr-r-k-sharma", name: "Dr. R. K. Sharma", spec: "General Medicine & Cardiology", departments: ["General Medicine", "Cardiology", "ICU", "Neurology"] },
     { id: "dr-lata-rajput", name: "Dr. Lata Rajput", spec: "Obstetrics & Gynecology", departments: ["Gynecology"] },
     { id: "dr-amit-gupta", name: "Dr. Amit Gupta", spec: "Orthopedics & Joint Surgery", departments: ["Orthopedics", "Trauma Care", "Physiotherapy"] },
     { id: "dr-paras-rajput", name: "Dr. Paras Rajput", spec: "Pediatrics & Neonatal Care", departments: ["Pediatrics"] },
     { id: "dr-ajay-bahadur-singh", name: "Dr. Ajay Bahadur Singh", spec: "General & Laparoscopic Surgery", departments: ["General Surgery"] },
-    { id: "dr-sunita-khandelwal", name: "Dr. Sunita Khandelwal", spec: "ENT Specialist", departments: ["ENT"] },
     { id: "dr-mohammad-shafiq", name: "Dr. Mohammad Shafiq", spec: "Orthopedics & Spine Surgery", departments: ["Orthopedics", "Trauma Care", "Joint Replacement", "Emergency Care"] },
     { id: "dr-piyush-taneja", name: "Dr. Piyush Taneja", spec: "General Medicine & Lifestyle Health", departments: ["General Medicine", "ICU", "Emergency Care"] },
     { id: "dr-sachin-tiwari", name: "Dr. Sachin Tiwari", spec: "Critical Care & Anesthesia", departments: ["ICU", "Emergency Care", "Trauma Care"] },
@@ -351,9 +349,9 @@ function handleUserMsg(text) {
         matchedKeyword = 'orthopedic';
       } else if (['pediatric', 'child', 'baby', 'paras', 'newborn', 'kid'].some(kw => lowerQuery.includes(kw))) {
         matchedKeyword = 'pediatric';
-      } else if (['cardiology', 'heart', 'sharma', 'medicine', 'general medicine', 'cardiologist'].some(kw => lowerQuery.includes(kw))) {
+      } else if (['cardiology', 'heart', 'taneja', 'medicine', 'general medicine', 'cardiologist'].some(kw => lowerQuery.includes(kw))) {
         matchedKeyword = 'cardiology';
-      } else if (['ent', 'ear', 'nose', 'throat', 'sunita', 'khandelwal'].some(kw => lowerQuery.includes(kw))) {
+      } else if (['ent', 'ear', 'nose', 'throat'].some(kw => lowerQuery.includes(kw))) {
         matchedKeyword = 'ent';
       } else if (['price', 'cost', 'fee', 'charge', 'package'].some(kw => lowerQuery.includes(kw))) {
         matchedKeyword = 'pricing';
