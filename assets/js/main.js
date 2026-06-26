@@ -352,6 +352,7 @@ function initPromoPopup() {
   const popupHtml = `
     <div class="promo-popup-backdrop" id="promo-popup">
       <div class="promo-popup-content">
+        <button class="promo-popup-close" id="promo-popup-close-btn">&times;</button>
         <!-- Brand Side -->
         <div class="promo-popup-brand-side">
           <div>
@@ -381,7 +382,6 @@ function initPromoPopup() {
 
         <!-- Form Side -->
         <div class="promo-popup-form-side">
-          <button class="promo-popup-close" id="promo-popup-close-btn">&times;</button>
           <h2>Request Triage Callback</h2>
           <p>Provide your contact details below. Our chief administrative desk will coordinate your priority consultation slot immediately.</p>
           
@@ -454,6 +454,8 @@ function initPromoPopup() {
       opacity: 0;
       visibility: hidden;
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
     .promo-popup-backdrop.active {
       opacity: 1;
@@ -472,6 +474,7 @@ function initPromoPopup() {
       overflow: hidden;
       display: flex;
       flex-direction: row;
+      margin: auto;
     }
     .promo-popup-backdrop.active .promo-popup-content {
       transform: scale(1) translateY(0);
@@ -581,7 +584,7 @@ function initPromoPopup() {
       align-items: center;
       justify-content: center;
       transition: var(--transition);
-      z-index: 10;
+      z-index: 110;
     }
     .promo-popup-close:hover {
       background: rgba(239, 68, 68, 0.1);
@@ -704,27 +707,26 @@ function initPromoPopup() {
     
     /* Responsive */
     @media (max-width: 768px) {
+      .promo-popup-backdrop {
+        align-items: flex-start;
+        padding: 20px 0;
+      }
       .promo-popup-content {
         flex-direction: column;
         max-width: 400px;
         width: 92%;
+        margin: 20px auto;
       }
       .promo-popup-brand-side {
-        width: 100%;
-        padding: 24px;
-      }
-      .promo-popup-brand-logo {
-        margin-bottom: 12px;
-      }
-      .promo-popup-brand-title {
-        font-size: 1.25rem;
-      }
-      .promo-popup-bullets {
-        display: none; /* Hide bullets on mobile for vertical space */
+        display: none; /* Hide brand side completely on tablet/mobile for maximum space/readability */
       }
       .promo-popup-form-side {
         width: 100%;
-        padding: 24px;
+        padding: 30px 20px;
+      }
+      .promo-popup-close {
+        top: 12px;
+        right: 12px;
       }
     }
   `;

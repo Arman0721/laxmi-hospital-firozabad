@@ -1955,7 +1955,7 @@ footer .footer-column:last-child p + div a:hover {
   padding: 0 24px;
 }
 .faq-item.active .faq-body {
-  max-height: 200px;
+  max-height: 1000px;
   padding: 0 24px 24px 24px;
 }
 .faq-body p {
@@ -2435,6 +2435,9 @@ footer .footer-column:last-child p + div a:hover {
   
   .dept-page-grid { grid-template-columns: 1fr; }
   .doc-profile-grid { grid-template-columns: 1fr; }
+  .hero-slider-container {
+    padding-bottom: 60%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -2457,6 +2460,16 @@ footer .footer-column:last-child p + div a:hover {
   
   .floating-actions { bottom: 20px; right: 20px; }
   .chat-widget { bottom: 85px; right: 10px; left: 10px; width: auto; }
+  .hero-slider-container {
+    padding-bottom: 75%;
+  }
+  .testi-card {
+    padding: 24px 16px;
+  }
+  .testi-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
 }
 
 /* ==========================================================================
