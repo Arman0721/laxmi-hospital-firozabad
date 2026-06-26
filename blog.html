@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Laxmi Hospital Firozabad Health Blog. Get medical guides, disease prevention checklists, and clinical tips written by our senior doctors. Stay healthy.">
   <meta name="keywords" content="Laxmi Hospital Blog, Health Tips Firozabad, Dengue prevention Firozabad, Pregnancy care tips">
   <title>Clinical Health Blog | Laxmi Multi-Speciality Hospital</title>
   
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=1.2.9">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -16,12 +20,12 @@
   <div class="top-bar">
     <div class="container top-bar-content">
       <div class="top-contacts">
-        <span class="top-contact-item"><i class="fas fa-phone-alt"></i> OPD Hotline: +91 99999 99999</span>
-        <span class="top-contact-item"><i class="fas fa-map-marker-alt"></i> Bypass Road, Firozabad</span>
+        <span class="top-contact-item"><i class="fas fa-phone-alt"></i> OPD Hotline: +91 7078221122</span>
+        <span class="top-contact-item"><i class="fas fa-map-marker-alt"></i> Nagla Bari, Firozabad, Uttar Pradesh</span>
       </div>
       <div class="top-contacts">
-        <a href="tel:+919999988888" class="top-emergency">
-          <i class="fas fa-ambulance"></i> 24x7 EMERGENCY HOTLINE: +91 99999 88888
+        <a href="tel:+917078221122" class="top-emergency">
+          <i class="fas fa-ambulance"></i> 24x7 EMERGENCY HOTLINE: +91 7078221122
         </a>
       </div>
     </div>
@@ -30,13 +34,7 @@
   <!-- NAVIGATION HEADER -->
   <header>
     <div class="container header-container">
-      <a href="index.html" class="logo">
-        <div class="logo-icon"><i class="fas fa-plus-square"></i></div>
-        <div class="logo-text">
-          <h3>LAXMI HOSPITAL</h3>
-          <span>Multi-Speciality Care</span>
-        </div>
-      </a>
+      <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Laxmi Hospital Logo" class="logo-img" decoding="async"></a>
       
       <nav class="nav-menu">
         <a href="index.html" class="nav-link">Home</a>
@@ -48,9 +46,6 @@
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
-      <div class="nav-actions">
-        <a href="appointment.html" class="btn btn-secondary"><i class="far fa-calendar-check"></i> Book OPD Slot</a>
-      </div>
 
       <div class="menu-toggle">
         <span></span>
@@ -83,10 +78,7 @@
         <!-- Article 1 -->
         <div class="blog-card">
           <div class="blog-card-img-wrapper">
-            <svg viewBox="0 0 300 200" style="background:#FEE2E2;width:100%;height:100%;">
-              <rect width="100%" height="100%" fill="#FEE2E2"/>
-              <text x="50" y="105" fill="#991B1B" font-size="16" font-weight="800">DENGUE MANAGEMENT</text>
-            </svg>
+            <img src="assets/images/blog-dengue.png" alt="Dengue Management" class="blog-card-img" loading="lazy" decoding="async">
             <span class="blog-card-tag">General Medicine</span>
           </div>
           <div class="blog-card-content">
@@ -96,6 +88,10 @@
             </div>
             <h3><a href="blog/dengue-symptoms.html">Dengue Symptoms, Prevention & Platelet Management</a></h3>
             <p>Understand standard guidelines for managing Dengue fever in Uttar Pradesh, monitoring warning triggers, and avoiding self-medication dangers.</p>
+            <div class="blog-card-tip">
+              <i class="fas fa-lightbulb"></i>
+              <span><strong>Health Tip:</strong> Prevent mosquito breeding by clearing standing water around your home and wear protective clothing.</span>
+            </div>
             <a href="blog/dengue-symptoms.html" class="blog-card-link">Read Full Guide <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
@@ -103,19 +99,20 @@
         <!-- Article 2 -->
         <div class="blog-card">
           <div class="blog-card-img-wrapper">
-            <svg viewBox="0 0 300 200" style="background:#ECFDF5;width:100%;height:100%;">
-              <rect width="100%" height="100%" fill="#ECFDF5"/>
-              <text x="60" y="105" fill="#065F46" font-size="16" font-weight="800">PREGNANCY GUIDE</text>
-            </svg>
+            <img src="assets/images/blog-pregnancy.png" alt="Pregnancy Guide" class="blog-card-img" loading="lazy" decoding="async">
             <span class="blog-card-tag">Obstetrics & Gynecology</span>
           </div>
           <div class="blog-card-content">
             <div class="blog-card-meta">
               <span><i class="far fa-calendar"></i> May 28, 2026</span>
-              <span><i class="far fa-user"></i> Dr. Sneha Singh</span>
+              <span><i class="far fa-user"></i> Dr. Lata Rajput</span>
             </div>
             <h3><a href="blog/pregnancy-care.html">Healthy Pregnancy Care Tips: First Trimster to Labor</a></h3>
             <p>A comprehensive clinical timeline mapping maternal nutrition targets, required vaccine dates, and early markers of high-risk pregnancy.</p>
+            <div class="blog-card-tip">
+              <i class="fas fa-lightbulb"></i>
+              <span><strong>Health Tip:</strong> Plan regular antenatal health checkups and maintain a healthy, nutrient-rich diet rich in iron and calcium.</span>
+            </div>
             <a href="blog/pregnancy-care.html" class="blog-card-link">Read Full Guide <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
@@ -123,19 +120,20 @@
         <!-- Article 3 -->
         <div class="blog-card">
           <div class="blog-card-img-wrapper">
-            <svg viewBox="0 0 300 200" style="background:#EBF4FC;width:100%;height:100%;">
-              <rect width="100%" height="100%" fill="#EBF4FC"/>
-              <text x="65" y="105" fill="#1E40AF" font-size="16" font-weight="800">CHILD IMMUNIZATION</text>
-            </svg>
+            <img src="assets/images/blog-child.png" alt="Child Immunization" class="blog-card-img" loading="lazy" decoding="async">
             <span class="blog-card-tag">Pediatrics</span>
           </div>
           <div class="blog-card-content">
             <div class="blog-card-meta">
               <span><i class="far fa-calendar"></i> May 15, 2026</span>
-              <span><i class="far fa-user"></i> Dr. Priya Bansal</span>
+              <span><i class="far fa-user"></i> Dr. Paras Rajput</span>
             </div>
             <h3><a href="blog/child-health-tips.html">Newborn Vaccination & Essential Nutrition Guides</a></h3>
             <p>Important guidelines detailing standard pediatric vaccination timings, physical developmental charts, and infantile allergy precautions.</p>
+            <div class="blog-card-tip">
+              <i class="fas fa-lightbulb"></i>
+              <span><strong>Health Tip:</strong> Adhere strictly to the vaccination chart schedule given by your pediatrician to build strong immunity.</span>
+            </div>
             <a href="blog/child-health-tips.html" class="blog-card-link">Read Full Guide <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
@@ -143,10 +141,7 @@
         <!-- Article 4 -->
         <div class="blog-card">
           <div class="blog-card-img-wrapper">
-            <svg viewBox="0 0 300 200" style="background:#FFFBEB;width:100%;height:100%;">
-              <rect width="100%" height="100%" fill="#FFFBEB"/>
-              <text x="50" y="105" fill="#B45309" font-size="16" font-weight="800">DIABETES CONTROL</text>
-            </svg>
+            <img src="assets/images/blog-diabetes.png" alt="Diabetes Control" class="blog-card-img" loading="lazy" decoding="async">
             <span class="blog-card-tag">General Medicine</span>
           </div>
           <div class="blog-card-content">
@@ -156,6 +151,10 @@
             </div>
             <h3><a href="blog/diabetes-management.html">Diabetes Management: HbA1c Control & Nutrition</a></h3>
             <p>A structured clinical manual to lower high blood glucose levels, plan low-glycemic diets, and monitor vascular diabetic neuropathy complications.</p>
+            <div class="blog-card-tip">
+              <i class="fas fa-lightbulb"></i>
+              <span><strong>Health Tip:</strong> Exercise for 30 minutes daily, choose low-glycemic index foods, and measure blood glucose regularly.</span>
+            </div>
             <a href="blog/diabetes-management.html" class="blog-card-link">Read Full Guide <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
@@ -163,10 +162,7 @@
         <!-- Article 5 -->
         <div class="blog-card">
           <div class="blog-card-img-wrapper">
-            <svg viewBox="0 0 300 200" style="background:#FAF5FF;width:100%;height:100%;">
-              <rect width="100%" height="100%" fill="#FAF5FF"/>
-              <text x="70" y="105" fill="#6B21A8" font-size="16" font-weight="800">HEART WELLNESS</text>
-            </svg>
+            <img src="assets/images/blog-heart.png" alt="Heart Wellness" class="blog-card-img" loading="lazy" decoding="async">
             <span class="blog-card-tag">Cardiology</span>
           </div>
           <div class="blog-card-content">
@@ -176,6 +172,10 @@
             </div>
             <h3><a href="blog/heart-care-tips.html">Preventive Heart Care Tips: Exercise & Stress Control</a></h3>
             <p>Five cardiac-boosting strategies to reduce arterial cholesterol plaque, regulate blood pressure parameters, and identify early chest pain markers.</p>
+            <div class="blog-card-tip">
+              <i class="fas fa-lightbulb"></i>
+              <span><strong>Health Tip:</strong> Reduce sodium intake, walk briskly for 30 minutes, avoid smoking, and control daily stress levels.</span>
+            </div>
             <a href="blog/heart-care-tips.html" class="blog-card-link">Read Full Guide <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
@@ -189,7 +189,7 @@
       <h2>Under Medical Emergency?</h2>
       <p>Laxmi Hospital operates a highly calibrated triage center equipped to receive ambulance cases 24/7/365.</p>
       <div class="emergency-cta-btn-group">
-        <a href="tel:+919999988888" class="btn btn-emergency"><i class="fas fa-phone-alt"></i> CALL TRAUMA Hotlines: +91 99999 88888</a>
+        <a href="tel:+917078221122" class="btn btn-emergency"><i class="fas fa-phone-alt"></i> CALL TRAUMA Hotlines: +91 7078221122</a>
       </div>
     </div>
   </section>
@@ -199,11 +199,7 @@
     <div class="container footer-grid">
       <div class="footer-column">
         <div class="footer-logo">
-          <div class="footer-logo-icon"><i class="fas fa-plus-square"></i></div>
-          <div class="footer-logo-text">
-            <h3>LAXMI HOSPITAL</h3>
-            <span>Multi-Speciality Care</span>
-          </div>
+          <img src="assets/images/logo-white.png" alt="Laxmi Hospital Logo" class="footer-logo-img" decoding="async">
         </div>
         <p class="footer-about-text">Laxmi Multi-Speciality Hospital is Firozabad's premier destination for critical trauma relief, orthopedic surgery, neonatal care, and professional outpatient consultations.</p>
         <div class="footer-hours-card" id="hospital-status-footer"></div>
@@ -212,44 +208,56 @@
       <div class="footer-column">
         <h3>Quick Links</h3>
         <div class="footer-links">
+          <a href="index.html"><i class="fas fa-chevron-right"></i> Home Page</a>
           <a href="about.html"><i class="fas fa-chevron-right"></i> About Our Hospital</a>
           <a href="departments.html"><i class="fas fa-chevron-right"></i> Medical Specialties</a>
           <a href="doctors.html"><i class="fas fa-chevron-right"></i> Senior Doctors List</a>
           <a href="appointment.html"><i class="fas fa-chevron-right"></i> Online Booking OPD</a>
-          <a href="blog.html"><i class="fas fa-chevron-right"></i> Health Articles Portal</a>
-          <a href="contact.html"><i class="fas fa-chevron-right"></i> Reach Us / Map</a>
+          <a href="blog.html"><i class="fas fa-chevron-right"></i> Health Blog</a>
+          <a href="faq.html"><i class="fas fa-chevron-right"></i> Frequently Asked Questions (FAQ)</a>
+          <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us / Reach Us</a>
         </div>
       </div>
 
       <div class="footer-column">
         <h3>Our Specialties</h3>
         <div class="footer-links">
-          <a href="departments/general-medicine.html"><i class="fas fa-chevron-right"></i> General Medicine</a>
-          <a href="departments/gynecology.html"><i class="fas fa-chevron-right"></i> Gynecology (Maternal)</a>
-          <a href="departments/pediatrics.html"><i class="fas fa-chevron-right"></i> Pediatrics (Child care)</a>
-          <a href="departments/orthopedics.html"><i class="fas fa-chevron-right"></i> Orthopedics & Joints</a>
-          <a href="departments/emergency-care.html"><i class="fas fa-chevron-right"></i> Emergency 24/7 Ward</a>
-          <a href="departments/icu.html"><i class="fas fa-chevron-right"></i> Level-3 ICU unit</a>
+          <a href="departments/general-medicine.html"><i class="fas fa-chevron-right"></i> Medicine</a>
+          <a href="departments/orthopedics.html"><i class="fas fa-chevron-right"></i> Orthopedic</a>
+          <a href="departments/general-surgery.html"><i class="fas fa-chevron-right"></i> General Surgery</a>
+          <a href="departments/pediatrics.html"><i class="fas fa-chevron-right"></i> Pediatric</a>
+          <a href="departments/urology.html"><i class="fas fa-chevron-right"></i> Urology</a>
+          <a href="departments/gastrology.html"><i class="fas fa-chevron-right"></i> Gastrology</a>
+          <a href="departments/ent.html"><i class="fas fa-chevron-right"></i> ENT</a>
+          <a href="departments/icu.html"><i class="fas fa-chevron-right"></i> Critical Care</a>
+          <a href="departments/trauma-care.html"><i class="fas fa-chevron-right"></i> Trauma Care</a>
+          <a href="departments/joint-replacement.html"><i class="fas fa-chevron-right"></i> Joint Replacement</a>
         </div>
       </div>
 
       <div class="footer-column">
         <h3>Emergency Support</h3>
         <p class="footer-about-text" style="margin-bottom:16px;">We have advanced cardiac life support (ALS) ambulances standing by in major nodes around Firozabad district.</p>
-        <div style="background-color:rgba(239, 68, 68, 0.1);border:1px solid rgba(239,68,68,0.2);padding:16px;border-radius:var(--radius-md);">
-          <span style="display:block;font-size:0.75rem;font-weight:700;color:var(--emergency);text-transform:uppercase;margin-bottom:4px;"><i class="fas fa-bullhorn"></i> Dispatch hotline</span>
-          <a href="tel:+919999988888" style="font-size:1.15rem;font-weight:800;color:var(--white);"><i class="fas fa-phone-alt"></i> +91 99999 88888</a>
+        <div style="background-color:rgba(239, 68, 68, 0.1);border:1px solid rgba(239,68,68,0.2);padding:16px;border-radius:var(--radius-md);display:flex;flex-direction:column;gap:8px;">
+          <div>
+            <span style="display:block;font-size:0.75rem;font-weight:700;color:var(--emergency);text-transform:uppercase;margin-bottom:2px;"><i class="fas fa-bullhorn"></i> Dispatch Hotline</span>
+            <a href="tel:+917078221122" style="font-size:1.15rem;font-weight:800;color:var(--white);"><i class="fas fa-phone-alt"></i> +91 7078221122</a>
+          </div>
+          <div style="border-top:1px dashed rgba(255,255,255,0.1);padding-top:6px;">
+            <span style="display:block;font-size:0.75rem;font-weight:700;color:var(--emergency);text-transform:uppercase;margin-bottom:2px;"><i class="fas fa-phone-alt"></i> Helpline Number</span>
+            <a href="tel:05612297700" style="font-size:1.15rem;font-weight:800;color:var(--white);"><i class="fas fa-phone-alt"></i> 05612-297700</a>
+          </div>
         </div>
       </div>
     </div>
     
     <div class="container footer-bottom">
-      <p>&copy; 2026 Laxmi Hospital, Firozabad. All rights reserved. Managed under clinical ethics protocols.</p>
+      <p>&copy; 2026 Laxmi Hospital, Firozabad. All rights reserved. Managed under clinical ethics protocols. | <a href="admin.html" style="color:var(--text-muted);text-decoration:underline;">Admin Portal</a></p>
     </div>
   </footer>
 
   <div class="floating-actions">
-    <a href="tel:+919999988888" class="floating-btn floating-btn-emergency"><i class="fas fa-phone-alt"></i></a>
+    <a href="tel:+917078221122" class="floating-btn floating-btn-emergency"><i class="fas fa-phone-alt"></i></a>
     <div class="floating-btn floating-btn-chat" id="chat-toggle-btn"><i class="far fa-comments"></i></div>
   </div>
 
@@ -275,7 +283,7 @@
     </div>
   </div>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=1.4.3"></script>
   <script src="assets/js/chat.js"></script>
 </body>
 </html>

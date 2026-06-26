@@ -3,32 +3,38 @@
    Handles dynamic doctor assignment, validation, and simulated bookings
    ========================================================================== */
 
-// Mapping of Departments to Doctors
-const DEPT_DOCTORS = {
+// Mapping of Departments to Doctors (dynamically resolved from localStorage or fallbacks)
+const DEFAULT_DEPT_DOCTORS = {
   "General Medicine": [
-    { id: "dr-r-k-sharma", name: "Dr. R. K. Sharma (M.D. Medicine)" }
+    { id: "dr-r-k-sharma", name: "Dr. R. K. Sharma (M.D. Medicine)" },
+    { id: "dr-piyush-taneja", name: "Dr. Piyush Taneja (M.B.B.S., M.D. Medicine)" }
   ],
   "Gynecology": [
-    { id: "dr-sneha-singh", name: "Dr. Sneha Singh (M.S. Obstetrics & Gynecology)" }
+    { id: "dr-lata-rajput", name: "Dr. Lata Rajput (M.S. Obstetrics & Gynecology)" }
   ],
   "Pediatrics": [
-    { id: "dr-priya-bansal", name: "Dr. Priya Bansal (M.D. Pediatrics)" }
+    { id: "dr-paras-rajput", name: "Dr. Paras Rajput (M.D. Pediatrics)" }
   ],
   "Orthopedics": [
-    { id: "dr-amit-gupta", name: "Dr. Amit Gupta (M.S. Orthopedics, Joint Replacement)" }
+    { id: "dr-amit-gupta", name: "Dr. Amit Gupta (M.S. Orthopedics, Joint Replacement)" },
+    { id: "dr-premraj", name: "Dr. Premraj (MBBS, MS Orthopedics)" }
   ],
   "General Surgery": [
-    { id: "dr-amit-gupta", name: "Dr. Amit Gupta (M.S. Orthopedics / Trauma Surgeon)" },
-    { id: "dr-sneha-singh", name: "Dr. Sneha Singh (Obstetrics & Gynecology)" }
+    { id: "dr-ajay-bahadur-singh", name: "Dr. Ajay Bahadur Singh (M.S. General Surgery, Chief Surgeon)" }
   ],
   "Emergency Care": [
-    { id: "emergency-duty", name: "Duty Emergency Medical Officer (24x7 Available)" }
+    { id: "emergency-duty", name: "Duty Emergency Medical Officer (24x7 Available)" },
+    { id: "dr-sachin-tiwari", name: "Dr. Sachin Tiwari (Consultant Intensivist)" }
   ],
   "ICU": [
-    { id: "dr-r-k-sharma", name: "Dr. R. K. Sharma (Critical Care Specialist)" }
+    { id: "dr-r-k-sharma", name: "Dr. R. K. Sharma (Critical Care Specialist)" },
+    { id: "dr-piyush-taneja", name: "Dr. Piyush Taneja (Consultant Physician)" },
+    { id: "dr-sachin-tiwari", name: "Dr. Sachin Tiwari (Consultant Anesthesiologist & Intensivist)" }
   ],
   "Trauma Care": [
-    { id: "dr-amit-gupta", name: "Dr. Amit Gupta (Trauma & Joint Specialist)" }
+    { id: "dr-amit-gupta", name: "Dr. Amit Gupta (Trauma & Joint Specialist)" },
+    { id: "dr-premraj", name: "Dr. Premraj (Senior Orthopedic Surgeon)" },
+    { id: "dr-sachin-tiwari", name: "Dr. Sachin Tiwari (Consultant Intensivist)" }
   ],
   "Cardiology": [
     { id: "dr-r-k-sharma", name: "Dr. R. K. Sharma (Consultant Cardiologist)" }
@@ -37,14 +43,57 @@ const DEPT_DOCTORS = {
     { id: "dr-r-k-sharma", name: "Dr. R. K. Sharma (Medicine Specialist)" }
   ],
   "ENT": [
-    { id: "dr-priya-bansal", name: "Dr. Priya Bansal (Pediatric & ENT Team)" }
+    { id: "dr-sunita-khandelwal", name: "Dr. Sunita Khandelwal (M.S. ENT)" }
   ],
   "Physiotherapy": [
     { id: "dr-amit-gupta", name: "Dr. Amit Gupta (Supervising Joint Surgeon)" }
   ]
 };
 
+let DEPT_DOCTORS = {};
+
+// Load dynamic doctors database mapped by department
+function loadBookingDatabase() {
+  const storedDocs = localStorage.getItem('laxmi_doctors');
+  if (storedDocs) {
+    try {
+      const doctorsList = JSON.parse(storedDocs);
+      DEPT_DOCTORS = {};
+      // Initialize empty mapping for all standard departments
+      Object.keys(DEFAULT_DEPT_DOCTORS).forEach(dept => {
+        DEPT_DOCTORS[dept] = [];
+      });
+      
+      // Always keep Emergency Duty Emergency Officer
+      DEPT_DOCTORS["Emergency Care"].push({ id: "emergency-duty", name: "Duty Emergency Medical Officer (24x7 Available)" });
+
+      doctorsList.forEach(doc => {
+        if (doc.departments && Array.isArray(doc.departments)) {
+          doc.departments.forEach(dept => {
+            if (!DEPT_DOCTORS[dept]) {
+              DEPT_DOCTORS[dept] = [];
+            }
+            // Avoid duplicate entries
+            if (!DEPT_DOCTORS[dept].some(d => d.id === doc.id)) {
+              DEPT_DOCTORS[dept].push({
+                id: doc.id,
+                name: `${doc.name} (${doc.qual})`
+              });
+            }
+          });
+        }
+      });
+    } catch(e) {
+      console.error("Failed to parse dynamic doctors list. Falling back to presets.", e);
+      DEPT_DOCTORS = Object.assign({}, DEFAULT_DEPT_DOCTORS);
+    }
+  } else {
+    DEPT_DOCTORS = Object.assign({}, DEFAULT_DEPT_DOCTORS);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  loadBookingDatabase();
   initBookingSystem();
 });
 
@@ -55,6 +104,41 @@ function initBookingSystem() {
   const bookingForm = document.getElementById('appointment-booking-form');
   
   if (!deptSelect || !docSelect) return;
+
+  const currentSelectedDept = deptSelect.value;
+
+  // Populate Department Dropdown dynamically from localStorage
+  const storedDepts = localStorage.getItem('laxmi_departments');
+  let departments = [];
+  if (storedDepts) {
+    try {
+      departments = JSON.parse(storedDepts).filter(d => d.isActive);
+    } catch(e) {
+      console.error("Failed to parse departments for booking dropdown", e);
+    }
+  }
+  
+  if (departments.length > 0) {
+    const placeholder = deptSelect.options[0];
+    deptSelect.innerHTML = '';
+    if (placeholder) {
+      deptSelect.appendChild(placeholder);
+    } else {
+      deptSelect.innerHTML = '<option value="" disabled selected>Select Medical Speciality *</option>';
+    }
+    
+    departments.forEach(dept => {
+      const option = document.createElement('option');
+      option.value = dept.title;
+      option.textContent = dept.title;
+      deptSelect.appendChild(option);
+    });
+
+    // Restore previously selected department if still available
+    if (currentSelectedDept && Array.from(deptSelect.options).some(o => o.value === currentSelectedDept)) {
+      deptSelect.value = currentSelectedDept;
+    }
+  }
   
   // 1. Set tomorrow's date as the minimum date in calendar
   if (dateInput) {
@@ -70,7 +154,7 @@ function initBookingSystem() {
   const updateDoctorDropdown = (selectedDept) => {
     docSelect.innerHTML = '<option value="" disabled selected>Choose Doctor *</option>';
     
-    if (selectedDept && DEPT_DOCTORS[selectedDept]) {
+    if (selectedDept && DEPT_DOCTORS[selectedDept] && DEPT_DOCTORS[selectedDept].length > 0) {
       DEPT_DOCTORS[selectedDept].forEach(doctor => {
         const option = document.createElement('option');
         option.value = doctor.id;
@@ -80,14 +164,28 @@ function initBookingSystem() {
       docSelect.disabled = false;
       return true;
     } else {
+      const option = document.createElement('option');
+      option.value = "";
+      option.textContent = "No Doctors Available *";
+      option.disabled = true;
+      option.selected = true;
+      docSelect.appendChild(option);
       docSelect.disabled = true;
       return false;
     }
   };
 
-  deptSelect.addEventListener('change', () => {
+  // Re-sync doctor dropdown options for selected department
+  if (deptSelect.value) {
     updateDoctorDropdown(deptSelect.value);
-  });
+  }
+
+  if (!deptSelect._hasChangeListener) {
+    deptSelect._hasChangeListener = true;
+    deptSelect.addEventListener('change', () => {
+      updateDoctorDropdown(deptSelect.value);
+    });
+  }
 
   // 2b. Parse URL Query Parameters on load (?dept=... or ?doctor=...)
   const urlParams = new URLSearchParams(window.location.search);
@@ -127,7 +225,8 @@ function initBookingSystem() {
   }
 
   // 3. Form submission validation and local storage integration
-  if (bookingForm) {
+  if (bookingForm && !bookingForm._hasSubmitListener) {
+    bookingForm._hasSubmitListener = true;
     bookingForm.addEventListener('submit', (e) => {
       e.preventDefault();
       
@@ -242,7 +341,7 @@ function renderBookingSuccess(formElement, data) {
       
       <!-- Action Buttons -->
       <div style="display: flex; flex-direction: column; gap: 12px;">
-        <a href="https://wa.me/919999999999?text=Hi%20Laxmi%20Hospital%2C%20I%20have%20booked%20an%20appointment%20with%20ID%20${data.appointmentId}%20for%20${data.doctorName}%20on%20${data.date}.%20Please%20confirm%20my%20arrival." 
+        <a href="https://wa.me/917078221122?text=Hi%20Laxmi%20Hospital%2C%20I%20have%20booked%20an%20appointment%20with%20ID%20${data.appointmentId}%20for%20${data.doctorName}%20on%20${data.date}.%20Please%20confirm%20my%20arrival." 
            target="_blank" 
            class="btn btn-whatsapp" 
            style="width: 100%;">
@@ -255,3 +354,11 @@ function renderBookingSuccess(formElement, data) {
     </div>
   `;
 }
+
+/* --- Cross-tab Real-time Synchronization --- */
+window.addEventListener('storage', (e) => {
+  if (e.key === 'laxmi_doctors' || e.key === 'laxmi_departments') {
+    loadBookingDatabase();
+    initBookingSystem();
+  }
+});

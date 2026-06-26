@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Laxmi Multi-Speciality Hospital is the best hospital in Firozabad. Offering 24x7 emergency care, expert gynecologists, child specialists, joint replacement surgeons, and level-1 ICU trauma care. Book your appointment online.">
@@ -12,7 +16,7 @@
   <title>Best Hospital in Firozabad | Laxmi Multi-Speciality Hospital</title>
   
   <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=1.2.9">
   
   <!-- FontAwesome CDN for Premium Medical Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -27,11 +31,11 @@
     "description": "Laxmi Hospital is the most trusted multi-speciality healthcare brand in Firozabad, Uttar Pradesh, offering 24x7 trauma care, advanced surgery, gynecology, and pediatrics.",
     "url": "https://www.laxmihospitalfirozabad.in/",
     "logo": "assets/images/logo.png",
-    "telephone": "+91-9999999999",
-    "emergencyTelephone": "+91-9999988888",
+    "telephone": "+91-7078221122",
+    "emergencyTelephone": "+91-7078221122",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Near Bypass Road",
+      "streetAddress": "Nagla Bari",
       "addressLocality": "Firozabad",
       "addressRegion": "Uttar Pradesh",
       "postalCode": "283203",
@@ -91,12 +95,12 @@
   <div class="top-bar">
     <div class="container top-bar-content">
       <div class="top-contacts">
-        <span class="top-contact-item"><i class="fas fa-phone-alt"></i> OPD Hotline: +91 99999 99999</span>
-        <span class="top-contact-item"><i class="fas fa-map-marker-alt"></i> Bypass Road, Firozabad</span>
+        <span class="top-contact-item"><i class="fas fa-phone-alt"></i> OPD Hotline: +91 7078221122</span>
+        <span class="top-contact-item"><i class="fas fa-map-marker-alt"></i> Nagla Bari, Firozabad, Uttar Pradesh</span>
       </div>
       <div class="top-contacts">
-        <a href="tel:+919999988888" class="top-emergency">
-          <i class="fas fa-ambulance"></i> 24x7 EMERGENCY HOTLINE: +91 99999 88888
+        <a href="tel:+917078221122" class="top-emergency">
+          <i class="fas fa-ambulance"></i> 24x7 EMERGENCY HOTLINE: +91 7078221122
         </a>
       </div>
     </div>
@@ -105,13 +109,7 @@
   <!-- NAVIGATION HEADER -->
   <header>
     <div class="container header-container">
-      <a href="index.html" class="logo" id="logo-anchor">
-        <div class="logo-icon"><i class="fas fa-plus-square"></i></div>
-        <div class="logo-text">
-          <h3>LAXMI HOSPITAL</h3>
-          <span>Multi-Speciality Care</span>
-        </div>
-      </a>
+      <a href="index.html" class="logo" id="logo-anchor"><img src="assets/images/logo.png" alt="Laxmi Hospital Logo" class="logo-img" decoding="async"></a>
       
       <nav class="nav-menu" id="nav-menu-panel">
         <a href="index.html" class="nav-link">Home</a>
@@ -123,10 +121,6 @@
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
-      <div class="nav-actions">
-        <a href="appointment.html" class="btn btn-secondary"><i class="far fa-calendar-check"></i> Book OPD Slot</a>
-        <a href="tel:+919999988888" class="btn btn-emergency"><i class="fas fa-phone-alt"></i> Emergency</a>
-      </div>
 
       <div class="menu-toggle" id="menu-toggle-btn">
         <span></span>
@@ -144,13 +138,13 @@
     <div class="hero-slider-container">
       <div class="hero-slides">
         <div class="hero-slide active">
-          <img src="./assets/images/slide-nephrology.png" alt="Advanced Nephrology Care" class="hero-slide-img" loading="eager">
+          <img src="./assets/images/slide-nephrology.png" alt="Advanced Nephrology Care" class="hero-slide-img" loading="eager" decoding="async">
         </div>
         <div class="hero-slide">
-          <img src="./assets/images/slide-cardiac.png" alt="Advanced Cardiac Care" class="hero-slide-img" loading="lazy">
+          <img src="./assets/images/slide-cardiac.png" alt="Advanced Cardiac Care" class="hero-slide-img" loading="lazy" decoding="async">
         </div>
         <div class="hero-slide">
-          <img src="./assets/images/slide-cancer.png" alt="Compassionate Cancer Care" class="hero-slide-img" loading="lazy">
+          <img src="./assets/images/slide-cancer.png" alt="Compassionate Cancer Care" class="hero-slide-img" loading="lazy" decoding="async">
         </div>
       </div>
       
@@ -166,39 +160,7 @@
       <button class="hero-slider-arrow next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
     </div>
 
-    <!-- Quick Action Floating Bar overlaying the bottom -->
-    <div class="hero-quick-actions">
-      <div class="container">
-        <div class="quick-actions-wrapper">
-          <a href="appointment.html" class="quick-action-card appointment">
-            <div class="card-icon"><i class="far fa-calendar-check"></i></div>
-            <div class="card-text">
-              <h3>Book Appointment</h3>
-              <p>10 mins average wait</p>
-            </div>
-            <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-          </a>
 
-          <a href="tel:+919999988888" class="quick-action-card emergency">
-            <div class="card-icon"><i class="fas fa-phone-alt"></i></div>
-            <div class="card-text">
-              <h3>24/7 Emergency Line</h3>
-              <p>Call: +91 99999 88888</p>
-            </div>
-            <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-          </a>
-
-          <a href="https://wa.me/919999999999?text=Hello%20Laxmi%20Hospital%2C%20I%20want%20to%20inquire%20about%20OPD%20timings." target="_blank" class="quick-action-card whatsapp">
-            <div class="card-icon"><i class="fab fa-whatsapp"></i></div>
-            <div class="card-text">
-              <h3>Chat on WhatsApp</h3>
-              <p>Instant OPD inquiries</p>
-            </div>
-            <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-          </a>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- 2. TRUST INDICATORS -->
@@ -206,24 +168,20 @@
     <div class="container">
       <div class="trust-grid">
         <div class="trust-card">
-          <div class="trust-number" data-target="15" data-suffix="+">0</div>
-          <div class="trust-label">Years of Trust</div>
+          <div class="trust-number" data-target="10" data-suffix="+">0</div>
+          <div class="trust-label">Years Experience</div>
         </div>
         <div class="trust-card">
-          <div class="trust-number" data-target="50000" data-suffix="+">0</div>
+          <div class="trust-number" data-target="1" data-suffix=" Lakh+">0</div>
           <div class="trust-label">Patients Treated</div>
         </div>
         <div class="trust-card">
-          <div class="trust-number" data-target="25" data-suffix="+">0</div>
-          <div class="trust-label">Expert Doctors</div>
+          <div class="trust-number" data-target="30" data-suffix="+">0</div>
+          <div class="trust-label">Hospital Beds</div>
         </div>
         <div class="trust-card">
-          <div class="trust-number" data-target="24" data-suffix="/7">0</div>
-          <div class="trust-label">Emergency Care</div>
-        </div>
-        <div class="trust-card">
-          <div class="trust-number" data-target="100" data-suffix="%">0</div>
-          <div class="trust-label">Advanced Equipments</div>
+          <div class="trust-number" data-target="20" data-suffix="+">0</div>
+          <div class="trust-label">Medical Experts</div>
         </div>
       </div>
     </div>
@@ -233,28 +191,7 @@
   <section class="section section-bg" id="about">
     <div class="container about-grid">
       <div class="about-image">
-        <!-- Beautiful facility SVG vector -->
-        <svg viewBox="0 0 450 400" width="100%" class="about-img-main" style="background:#F0F7FF; border-radius:var(--radius-lg);">
-          <circle cx="225" cy="200" r="160" fill="#E2E8F0" opacity="0.6"/>
-          <!-- Surgeon avatar conceptualization -->
-          <circle cx="225" cy="160" r="70" fill="#0B4F93"/>
-          <path d="M125 320 C125 240, 325 240, 325 320 Z" fill="#10B981" />
-          <!-- Stethoscope -->
-          <path d="M190 200 C190 280, 260 280, 260 200" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
-          <circle cx="225" cy="250" r="18" fill="#F1F5F9" stroke="#0B4F93" stroke-width="4"/>
-          <!-- Doctor face shield outline -->
-          <rect x="200" y="130" width="50" height="40" rx="6" fill="#FFFFFF" opacity="0.9"/>
-          <rect x="208" y="140" width="12" height="12" rx="2" fill="#0B4F93"/>
-          <rect x="230" y="140" width="12" height="12" rx="2" fill="#0B4F93"/>
-          <!-- Hospital badge -->
-          <circle cx="225" cy="300" r="15" fill="#EF4444"/>
-          <rect x="222" y="291" width="6" height="18" fill="#FFFFFF"/>
-          <rect x="216" y="297" width="18" height="6" fill="#FFFFFF"/>
-        </svg>
-        <div class="about-badge">
-          <h3>15+</h3>
-          <p>Years of Healing</p>
-        </div>
+        <img src="assets/images/about-hospital.jpg" alt="Laxmi Multi-Speciality Hospital Building" class="about-img-main" style="width: 100%; height: auto; display: block; border-radius: 0; box-shadow: none;" loading="lazy" decoding="async">
       </div>
       
       <div class="about-content">
@@ -285,135 +222,97 @@
   </section>
 
   <!-- 4. SPECIALITY DEPARTMENTS -->
-  <section class="section" id="departments">
+  <section class="section section-bg" id="departments">
     <div class="container">
       <div class="text-center">
         <span class="section-tag">Our Departments</span>
         <h2 class="section-title">Highly Specialized Medical Disciplines</h2>
-        <p class="section-subtitle">Laxmi Hospital combines clinical veterans and high-precision apparatus across twelve core healthcare divisions to treat any complex pathology.</p>
+        <p class="section-subtitle">Laxmi Hospital combines clinical veterans and high-precision apparatus across ten core healthcare divisions to treat any complex pathology.</p>
       </div>
       
       <div class="dept-grid">
-        <!-- 1. General Medicine -->
-        <div class="dept-card">
-          <div class="dept-header">
-            <div class="dept-icon"><i class="fas fa-stethoscope"></i></div>
-            <h3>General Medicine</h3>
-            <p>Comprehensive assessment, therapeutic protocols, and systemic disease management (diabetes, fevers, dengue, blood pressure).</p>
+        <!-- 1. Medicine -->
+        <a href="departments/general-medicine.html" class="dept-card active">
+          <div class="dept-icon-wrapper">
+            <img src="assets/images/dept-medicine.png" alt="Medicine" class="dept-icon-img" loading="lazy" decoding="async">
           </div>
-          <a href="departments/general-medicine.html" class="dept-link">Explore Department <i class="fas fa-arrow-right"></i></a>
-        </div>
+          <h3 class="dept-title">Medicine</h3>
+        </a>
 
-        <!-- 2. Gynecology -->
-        <div class="dept-card">
-          <div class="dept-header">
-            <div class="dept-icon"><i class="fas fa-baby-carriage"></i></div>
-            <h3>Gynecology</h3>
-            <p>Obstetrics, high-risk pregnancy control, infertility diagnostics, uterine procedures, and painless labor suites.</p>
+        <!-- 2. Orthopedic -->
+        <a href="departments/orthopedics.html" class="dept-card">
+          <div class="dept-icon-wrapper">
+            <img src="assets/images/dept-orthopedic.png" alt="Orthopedic" class="dept-icon-img" loading="lazy" decoding="async">
           </div>
-          <a href="departments/gynecology.html" class="dept-link">Explore Department <i class="fas fa-arrow-right"></i></a>
-        </div>
+          <h3 class="dept-title">Orthopedic</h3>
+        </a>
 
-        <!-- 3. Pediatrics -->
-        <div class="dept-card">
-          <div class="dept-header">
-            <div class="dept-icon"><i class="fas fa-baby"></i></div>
-            <h3>Pediatrics</h3>
-            <p>Newborn immunization, intensive neonatal monitoring, child developmental assessments, and pediatric respiratory control.</p>
+        <!-- 3. General Surgery -->
+        <a href="departments/general-surgery.html" class="dept-card">
+          <div class="dept-icon-wrapper">
+            <img src="assets/images/dept-surgery.png" alt="General Surgery" class="dept-icon-img" loading="lazy" decoding="async">
           </div>
-          <a href="departments/pediatrics.html" class="dept-link">Explore Department <i class="fas fa-arrow-right"></i></a>
-        </div>
+          <h3 class="dept-title">General Surgery</h3>
+        </a>
 
-        <!-- 4. Orthopedics -->
-        <div class="dept-card">
-          <div class="dept-header">
-            <div class="dept-icon"><i class="fas fa-bone"></i></div>
-            <h3>Orthopedics</h3>
-            <p>Total hip & knee replacements, trauma fracture reductions, spine stabilization, arthritis therapy, and arthroscopy.</p>
+        <!-- 4. Pediatric -->
+        <a href="departments/pediatrics.html" class="dept-card">
+          <div class="dept-icon-wrapper">
+            <img src="assets/images/dept-pediatrics.png" alt="Pediatric" class="dept-icon-img" loading="lazy" decoding="async">
           </div>
-          <a href="departments/orthopedics.html" class="dept-link">Explore Department <i class="fas fa-arrow-right"></i></a>
-        </div>
+          <h3 class="dept-title">Pediatric</h3>
+        </a>
 
-        <!-- 5. General Surgery -->
-        <div class="dept-card">
-          <div class="dept-header">
-            <div class="dept-icon"><i class="fas fa-syringe"></i></div>
-            <h3>General Surgery</h3>
-            <p>Advanced laparoscopic operations, gall bladder removal, hernia mesh repairs, appendectomy, and standard soft-tissue procedures.</p>
+        <!-- 5. Urology -->
+        <a href="departments/urology.html" class="dept-card">
+          <div class="dept-icon-wrapper">
+            <img src="assets/images/dept-urology.png" alt="Urology" class="dept-icon-img" loading="lazy" decoding="async">
           </div>
-          <a href="departments/general-surgery.html" class="dept-link">Explore Department <i class="fas fa-arrow-right"></i></a>
-        </div>
+          <h3 class="dept-title">Urology</h3>
+        </a>
 
-        <!-- 6. Emergency Care -->
-        <div class="dept-card">
-          <div class="dept-header">
-            <div class="dept-icon"><i class="fas fa-first-aid"></i></div>
-            <h3>Emergency Care</h3>
-            <p>Triage procedures, immediate life support, cardiac stabilization, acute poisons treatment, and emergency dispatch.</p>
+        <!-- 6. Gastrology -->
+        <a href="departments/gastrology.html" class="dept-card">
+          <div class="dept-icon-wrapper">
+            <img src="assets/images/dept-gastrology.png" alt="Gastrology" class="dept-icon-img" loading="lazy" decoding="async">
           </div>
-          <a href="departments/emergency-care.html" class="dept-link">Explore Department <i class="fas fa-arrow-right"></i></a>
-        </div>
+          <h3 class="dept-title">Gastrology</h3>
+        </a>
 
-        <!-- 7. ICU -->
-        <div class="dept-card">
-          <div class="dept-header">
-            <div class="dept-icon"><i class="fas fa-procedures"></i></div>
-            <h3>ICU</h3>
-            <p>State-of-the-art Level-3 ICU ventilation systems, invasive multi-channel vital monitors, and 24x7 critical care nurse oversight.</p>
+        <!-- 7. ENT -->
+        <a href="departments/ent.html" class="dept-card">
+          <div class="dept-icon-wrapper">
+            <img src="assets/images/dept-ent.png" alt="ENT" class="dept-icon-img" loading="lazy" decoding="async">
           </div>
-          <a href="departments/icu.html" class="dept-link">Explore Department <i class="fas fa-arrow-right"></i></a>
-        </div>
+          <h3 class="dept-title">ENT</h3>
+        </a>
 
-        <!-- 8. Trauma Care -->
-        <div class="dept-card">
-          <div class="dept-header">
-            <div class="dept-icon"><i class="fas fa-heartbeat"></i></div>
-            <h3>Trauma Care</h3>
-            <p>Fast-response team specializing in high-speed highway accidents, blunt impact traumas, head injuries, and immediate vascular fixes.</p>
+        <!-- 8. Critical Care -->
+        <a href="departments/icu.html" class="dept-card">
+          <div class="dept-icon-wrapper">
+            <img src="assets/images/dept-icu.png" alt="Critical Care" class="dept-icon-img" loading="lazy" decoding="async">
           </div>
-          <a href="departments/trauma-care.html" class="dept-link">Explore Department <i class="fas fa-arrow-right"></i></a>
-        </div>
+          <h3 class="dept-title">Critical Care</h3>
+        </a>
 
-        <!-- 9. Cardiology -->
-        <div class="dept-card">
-          <div class="dept-header">
-            <div class="dept-icon"><i class="fas fa-heart"></i></div>
-            <h3>Cardiology</h3>
-            <p>Cardiac screenings, dynamic ECG monitoring, hypertension management, myocardial infarct therapies, and preventive vascular plans.</p>
+        <!-- 9. Trauma Care -->
+        <a href="departments/trauma-care.html" class="dept-card">
+          <div class="dept-icon-wrapper">
+            <img src="assets/images/dept-trauma.png" alt="Trauma Care" class="dept-icon-img" loading="lazy" decoding="async">
           </div>
-          <a href="departments/cardiology.html" class="dept-link">Explore Department <i class="fas fa-arrow-right"></i></a>
-        </div>
+          <h3 class="dept-title">Trauma Care</h3>
+        </a>
 
-        <!-- 10. Neurology -->
-        <div class="dept-card">
-          <div class="dept-header">
-            <div class="dept-icon"><i class="fas fa-brain"></i></div>
-            <h3>Neurology</h3>
-            <p>Stroke rehabilitation management, clinical epilepsy treatments, chronic migraine protocols, and peripheral neuropathies.</p>
+        <!-- 10. Joint Replacement -->
+        <a href="departments/joint-replacement.html" class="dept-card">
+          <div class="dept-icon-wrapper">
+            <img src="assets/images/dept-joint.png" alt="Joint Replacement" class="dept-icon-img" loading="lazy" decoding="async">
           </div>
-          <a href="departments/neurology.html" class="dept-link">Explore Department <i class="fas fa-arrow-right"></i></a>
-        </div>
-
-        <!-- 11. ENT -->
-        <div class="dept-card">
-          <div class="dept-header">
-            <div class="dept-icon"><i class="fas fa-ear-deaf"></i></div>
-            <h3>ENT</h3>
-            <p>Hearing diagnostics, throat infections treatments, chronic sinusitis solutions, tonsillectomies, and nasal septum corrections.</p>
-          </div>
-          <a href="departments/ent.html" class="dept-link">Explore Department <i class="fas fa-arrow-right"></i></a>
-        </div>
-
-        <!-- 12. Physiotherapy -->
-        <div class="dept-card">
-          <div class="dept-header">
-            <div class="dept-icon"><i class="fas fa-hand-holding-medical"></i></div>
-            <h3>Physiotherapy</h3>
-            <p>Post-surgical joint mobilizations, stroke neurological recovery exercises, musculoskeletal sports rehab, and ergonomic adjustments.</p>
-          </div>
-          <a href="departments/physiotherapy.html" class="dept-link">Explore Department <i class="fas fa-arrow-right"></i></a>
-        </div>
+          <h3 class="dept-title">Joint Replacement</h3>
+        </a>
       </div>
+    </div>
+  </section>
     </div>
   </section>
 
@@ -426,97 +325,194 @@
         <p class="section-subtitle">Highly accredited physicians and medical surgeons dedicated to providing customized patient treatments in Firozabad.</p>
       </div>
 
-      <div class="docs-grid">
-        <!-- Doctor 1 -->
-        <div class="doc-card">
-          <div class="doc-img-wrapper">
-            <!-- Structured SVG Placeholder showing medical profile for high-performance and premium design -->
-            <svg viewBox="0 0 200 280" class="doc-img" style="background:#E2E8F0;">
-              <circle cx="100" cy="110" r="50" fill="#0B4F93"/>
-              <path d="M40 240 C40 180, 160 180, 160 240 Z" fill="#10B981" />
-              <rect x="85" y="160" width="30" height="20" fill="#FFFFFF"/>
-              <!-- Stethoscope line -->
-              <path d="M75 140 Q100 200 125 140" fill="none" stroke="#E2E8F0" stroke-width="4"/>
-            </svg>
-            <div class="doc-tag">Chief Cardiologist</div>
-          </div>
-          <div class="doc-info">
-            <h3>Dr. R. K. Sharma</h3>
-            <div class="doc-spec">General Medicine & Cardiology</div>
-            <div class="doc-qual"><i class="fas fa-graduation-cap"></i> M.D. Medicine, M.R.C.P (London)</div>
-            <div class="doc-exp"><i class="fas fa-briefcase"></i> 18+ Years of Experience</div>
-            <div class="doc-cta">
-              <a href="appointment.html?doctor=dr-r-k-sharma" class="doc-btn doc-btn-book">Book OPD</a>
-              <a href="doctors/dr-r-k-sharma.html" class="doc-btn doc-btn-profile">View Bio</a>
+      <div class="docs-carousel-container">
+        <div class="docs-carousel-track-wrapper">
+          <div class="docs-carousel-track">
+            <!-- Doctor 1 -->
+            <div class="doc-card">
+              <div class="doc-img-wrapper">
+                <div class="doc-avatar-container">
+                  <img src="assets/images/dr-r-k-sharma.png" alt="Dr. R. K. Sharma" class="doc-img" loading="lazy" decoding="async">
+                </div>
+                <div class="doc-tag">Chief Cardiologist</div>
+              </div>
+              <div class="doc-info">
+                <h3>Dr. R. K. Sharma</h3>
+                <div class="doc-spec">General Medicine & Cardiology</div>
+                <div class="doc-qual"><i class="fas fa-graduation-cap"></i> M.D. Medicine, M.R.C.P (London)</div>
+                <div class="doc-exp"><i class="fas fa-briefcase"></i> 18+ Years of Experience</div>
+                <div class="doc-cta">
+                  <a href="appointment.html?doctor=dr-r-k-sharma" class="doc-btn doc-btn-book">Book OPD</a>
+                  <a href="doctors/dr-r-k-sharma.html" class="doc-btn doc-btn-profile">View Bio</a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Doctor 2 -->
-        <div class="doc-card">
-          <div class="doc-img-wrapper">
-            <svg viewBox="0 0 200 280" class="doc-img" style="background:#EBF4FC;">
-              <circle cx="100" cy="110" r="50" fill="#0B4F93"/>
-              <path d="M40 240 C40 180, 160 180, 160 240 Z" fill="#EF4444" />
-              <rect x="85" y="160" width="30" height="20" fill="#FFFFFF"/>
-            </svg>
-            <div class="doc-tag">Senior Gynecologist</div>
-          </div>
-          <div class="doc-info">
-            <h3>Dr. Sneha Singh</h3>
-            <div class="doc-spec">Obstetrics & Gynecology</div>
-            <div class="doc-qual"><i class="fas fa-graduation-cap"></i> M.S. Obstetrics & Gynecology, D.G.O</div>
-            <div class="doc-exp"><i class="fas fa-briefcase"></i> 12+ Years of Experience</div>
-            <div class="doc-cta">
-              <a href="appointment.html?doctor=dr-sneha-singh" class="doc-btn doc-btn-book">Book OPD</a>
-              <a href="doctors/dr-sneha-singh.html" class="doc-btn doc-btn-profile">View Bio</a>
+            <!-- Doctor 2 -->
+            <div class="doc-card">
+              <div class="doc-img-wrapper">
+                <div class="doc-avatar-container">
+                  <img src="assets/images/dr-lata-rajput.jpg?v=1.0.1" alt="Dr. Lata Rajput" class="doc-img" loading="lazy" decoding="async">
+                </div>
+                <div class="doc-tag">Senior Gynecologist</div>
+              </div>
+              <div class="doc-info">
+                <h3>Dr. Lata Rajput</h3>
+                <div class="doc-spec">Obstetrics & Gynecology</div>
+                <div class="doc-qual"><i class="fas fa-graduation-cap"></i> M.S. Obstetrics & Gynecology, D.G.O</div>
+                <div class="doc-exp"><i class="fas fa-briefcase"></i> 12+ Years of Experience</div>
+                <div class="doc-cta">
+                  <a href="appointment.html?doctor=dr-lata-rajput" class="doc-btn doc-btn-book">Book OPD</a>
+                  <a href="doctors/dr-lata-rajput.html" class="doc-btn doc-btn-profile">View Bio</a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Doctor 3 -->
-        <div class="doc-card">
-          <div class="doc-img-wrapper">
-            <svg viewBox="0 0 200 280" class="doc-img" style="background:#ECFDF5;">
-              <circle cx="100" cy="110" r="50" fill="#0B4F93"/>
-              <path d="M40 240 C40 180, 160 180, 160 240 Z" fill="#F59E0B" />
-              <rect x="85" y="160" width="30" height="20" fill="#FFFFFF"/>
-            </svg>
-            <div class="doc-tag">Orthopedic Surgeon</div>
-          </div>
-          <div class="doc-info">
-            <h3>Dr. Amit Gupta</h3>
-            <div class="doc-spec">Orthopedics & Joint Surgery</div>
-            <div class="doc-qual"><i class="fas fa-graduation-cap"></i> M.S. Orthopedics, Joint Specialist</div>
-            <div class="doc-exp"><i class="fas fa-briefcase"></i> 15+ Years of Experience</div>
-            <div class="doc-cta">
-              <a href="appointment.html?doctor=dr-amit-gupta" class="doc-btn doc-btn-book">Book OPD</a>
-              <a href="doctors/dr-amit-gupta.html" class="doc-btn doc-btn-profile">View Bio</a>
+            <!-- Doctor 3 -->
+            <div class="doc-card">
+              <div class="doc-img-wrapper">
+                <div class="doc-avatar-container">
+                  <img src="assets/images/dr-amit-gupta.png" alt="Dr. Amit Gupta" class="doc-img" loading="lazy" decoding="async">
+                </div>
+                <div class="doc-tag">Surgeon</div>
+              </div>
+              <div class="doc-info">
+                <h3>Dr. Amit Gupta</h3>
+                <div class="doc-spec">Orthopedics & Joint Surgery</div>
+                <div class="doc-qual"><i class="fas fa-graduation-cap"></i> M.S. Orthopedics, Joint Specialist</div>
+                <div class="doc-exp"><i class="fas fa-briefcase"></i> 15+ Years of Experience</div>
+                <div class="doc-cta">
+                  <a href="appointment.html?doctor=dr-amit-gupta" class="doc-btn doc-btn-book">Book OPD</a>
+                  <a href="doctors/dr-amit-gupta.html" class="doc-btn doc-btn-profile">View Bio</a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Doctor 4 -->
-        <div class="doc-card">
-          <div class="doc-img-wrapper">
-            <svg viewBox="0 0 200 280" class="doc-img" style="background:#F0F7FF;">
-              <circle cx="100" cy="110" r="50" fill="#0B4F93"/>
-              <path d="M40 240 C40 180, 160 180, 160 240 Z" fill="#64748B" />
-              <rect x="85" y="160" width="30" height="20" fill="#FFFFFF"/>
-            </svg>
-            <div class="doc-tag">Child Specialist</div>
-          </div>
-          <div class="doc-info">
-            <h3>Dr. Priya Bansal</h3>
-            <div class="doc-spec">Pediatrics & Neonatal Care</div>
-            <div class="doc-qual"><i class="fas fa-graduation-cap"></i> M.D. Pediatrics, D.C.H (Pediatrics)</div>
-            <div class="doc-exp"><i class="fas fa-briefcase"></i> 10+ Years of Experience</div>
-            <div class="doc-cta">
-              <a href="appointment.html?doctor=dr-priya-bansal" class="doc-btn doc-btn-book">Book OPD</a>
-              <a href="doctors/dr-priya-bansal.html" class="doc-btn doc-btn-profile">View Bio</a>
+            <!-- Doctor 4 -->
+            <div class="doc-card">
+              <div class="doc-img-wrapper">
+                <div class="doc-avatar-container">
+                  <img src="assets/images/dr-paras-rajput.jpg" alt="Dr. Paras Rajput" class="doc-img" loading="lazy" decoding="async">
+                </div>
+                <div class="doc-tag">Pediatrician</div>
+              </div>
+              <div class="doc-info">
+                <h3>Dr. Paras Rajput</h3>
+                <div class="doc-spec">Pediatrics & Neonatal Care</div>
+                <div class="doc-qual"><i class="fas fa-graduation-cap"></i> M.D. Pediatrics, D.C.H (Pediatrics)</div>
+                <div class="doc-exp"><i class="fas fa-briefcase"></i> 10+ Years of Experience</div>
+                <div class="doc-cta">
+                  <a href="appointment.html?doctor=dr-paras-rajput" class="doc-btn doc-btn-book">Book OPD</a>
+                  <a href="doctors/dr-paras-rajput.html" class="doc-btn doc-btn-profile">View Bio</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Doctor 5 -->
+            <div class="doc-card">
+              <div class="doc-img-wrapper">
+                <div class="doc-avatar-container">
+                  <img src="assets/images/dr-ajay-bahadur-singh.jpg" alt="Dr. Ajay Bahadur Singh" class="doc-img" loading="lazy" decoding="async">
+                </div>
+                <div class="doc-tag">Chief Surgeon</div>
+              </div>
+              <div class="doc-info">
+                <h3>Dr. Ajay Bahadur Singh</h3>
+                <div class="doc-spec">General & Laparoscopic Surgery</div>
+                <div class="doc-qual"><i class="fas fa-graduation-cap"></i> M.S. General Surgery, F.I.A.G.E.S</div>
+                <div class="doc-exp"><i class="fas fa-briefcase"></i> 14+ Years of Experience</div>
+                <div class="doc-cta">
+                  <a href="appointment.html?doctor=dr-ajay-bahadur-singh" class="doc-btn doc-btn-book">Book OPD</a>
+                  <a href="doctors/dr-ajay-bahadur-singh.html" class="doc-btn doc-btn-profile">View Bio</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Doctor 6 -->
+            <div class="doc-card">
+              <div class="doc-img-wrapper">
+                <div class="doc-avatar-container">
+                  <img src="assets/images/dr-sunita-khandelwal.png" alt="Dr. Sunita Khandelwal" class="doc-img" loading="lazy" decoding="async">
+                </div>
+                <div class="doc-tag">ENT Specialist</div>
+              </div>
+              <div class="doc-info">
+                <h3>Dr. Sunita Khandelwal</h3>
+                <div class="doc-spec">ENT & Head-Neck Surgery</div>
+                <div class="doc-qual"><i class="fas fa-graduation-cap"></i> M.S. ENT, D.L.O</div>
+                <div class="doc-exp"><i class="fas fa-briefcase"></i> 11+ Years of Experience</div>
+                <div class="doc-cta">
+                  <a href="appointment.html?doctor=dr-sunita-khandelwal" class="doc-btn doc-btn-book">Book OPD</a>
+                  <a href="doctors/dr-sunita-khandelwal.html" class="doc-btn doc-btn-profile">View Bio</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Doctor 7 -->
+            <div class="doc-card">
+              <div class="doc-img-wrapper">
+                <div class="doc-avatar-container">
+                  <img src="assets/images/dr-mohammad-shafiq.jpg?v=1.0.1" alt="Dr. Mohammad Shafiq" class="doc-img" loading="lazy" decoding="async">
+                </div>
+                <div class="doc-tag">Orthopedic & Trauma Surgeon</div>
+              </div>
+              <div class="doc-info">
+                <h3>Dr. Mohammad Shafiq</h3>
+                <div class="doc-spec">Orthopedics & Spine Surgery</div>
+                <div class="doc-qual"><i class="fas fa-graduation-cap"></i> M.B.B.S, M.S. (Orthopedics)</div>
+                <div class="doc-exp"><i class="fas fa-briefcase"></i> 12+ Years of Experience</div>
+                <div class="doc-cta">
+                  <a href="appointment.html?doctor=dr-mohammad-shafiq" class="doc-btn doc-btn-book">Book OPD</a>
+                  <a href="doctors/dr-mohammad-shafiq.html" class="doc-btn doc-btn-profile">View Bio</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Doctor 8 -->
+            <div class="doc-card">
+              <div class="doc-img-wrapper">
+                <div class="doc-avatar-container">
+                  <img src="assets/images/dr-piyush-taneja.jpg" alt="Dr. Piyush Taneja" class="doc-img" loading="lazy" decoding="async">
+                </div>
+                <div class="doc-tag">Consultant Physician</div>
+              </div>
+              <div class="doc-info">
+                <h3>Dr. Piyush Taneja</h3>
+                <div class="doc-spec">General Medicine & Lifestyle Health</div>
+                <div class="doc-qual"><i class="fas fa-graduation-cap"></i> M.B.B.S., M.D. Medicine</div>
+                <div class="doc-exp"><i class="fas fa-briefcase"></i> 15+ Years of Experience</div>
+                <div class="doc-cta">
+                  <a href="appointment.html?doctor=dr-piyush-taneja" class="doc-btn doc-btn-book">Book OPD</a>
+                  <a href="doctors/dr-piyush-taneja.html" class="doc-btn doc-btn-profile">View Bio</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Doctor 9 -->
+            <div class="doc-card">
+              <div class="doc-img-wrapper">
+                <div class="doc-avatar-container">
+                  <img src="assets/images/dr-sachin-tiwari.jpg" alt="Dr. Sachin Tiwari" class="doc-img" loading="lazy" decoding="async">
+                </div>
+                <div class="doc-tag">Consultant Anesthesiologist & Intensivist</div>
+              </div>
+              <div class="doc-info">
+                <h3>Dr. Sachin Tiwari</h3>
+                <div class="doc-spec">Critical Care & Anesthesia</div>
+                <div class="doc-qual"><i class="fas fa-graduation-cap"></i> MBBS, D.A., C.C.P.M.I.C.</div>
+                <div class="doc-exp"><i class="fas fa-briefcase"></i> 12+ Years of Experience</div>
+                <div class="doc-cta">
+                  <a href="appointment.html?doctor=dr-sachin-tiwari" class="doc-btn doc-btn-book">Book OPD</a>
+                  <a href="doctors/dr-sachin-tiwari.html" class="doc-btn doc-btn-profile">View Bio</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <!-- Controls -->
+        <button class="carousel-nav prev" id="doc-prev" aria-label="Previous Doctor"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-nav next" id="doc-next" aria-label="Next Doctor"><i class="fas fa-chevron-right"></i></button>
+        <div class="docs-carousel-dots" id="doc-dots"></div>
       </div>
     </div>
   </section>
@@ -565,32 +561,7 @@
       </div>
       
       <div class="why-img-container">
-        <!-- Healthcare trust graphic -->
-        <svg viewBox="0 0 450 400" width="100%" class="why-main-img" style="background:#F8FAFC; border-radius:var(--radius-lg);">
-          <!-- Hospital ward illustration -->
-          <rect x="40" y="80" width="370" height="260" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
-          <rect x="60" y="110" width="150" height="90" rx="8" fill="#ECFDF5"/>
-          <text x="70" y="140" fill="#0D9668" font-size="14" font-weight="800">24x7 Intensive</text>
-          <text x="70" y="160" fill="#0D9668" font-size="10" font-weight="600">Cardiac Ward Ready</text>
-          
-          <rect x="240" y="110" width="150" height="90" rx="8" fill="#EBF4FC"/>
-          <text x="250" y="140" fill="#0B4F93" font-size="14" font-weight="800">Level-3 ICU</text>
-          <text x="250" y="160" fill="#0B4F93" font-size="10" font-weight="600">Continuous Ventilation</text>
-
-          <rect x="60" y="220" width="330" height="100" rx="8" fill="#FFFBEB" stroke="#F59E0B" stroke-dasharray="4,4"/>
-          <!-- Medical badge icon -->
-          <circle cx="100" cy="270" r="20" fill="#F59E0B" opacity="0.2"/>
-          <path d="M92 270 L98 276 L108 264" fill="none" stroke="#D97706" stroke-width="4" stroke-linecap="round"/>
-          <text x="135" y="265" fill="#B45309" font-size="12" font-weight="800">ISO 9001:2015 Standards</text>
-          <text x="135" y="285" fill="#B45309" font-size="9" font-weight="600">100% Hospital Infection Control Protocols</text>
-        </svg>
-        <div class="why-floating-badge">
-          <div class="why-floating-badge-icon"><i class="fas fa-check-double"></i></div>
-          <div>
-            <h4 style="font-weight:800;color:var(--primary);">100% Patient Trust</h4>
-            <p style="font-size:0.75rem;color:var(--text-muted);">Verified Patient Outpatient Audits</p>
-          </div>
-        </div>
+        <img src="assets/images/why-hospital.png" alt="Laxmi Multi-Speciality Hospital Quality Care Medical Equipment" class="why-main-img seamless" width="500" height="500" loading="lazy" decoding="async">
       </div>
     </div>
   </section>
@@ -753,66 +724,6 @@
     </div>
   </section>
 
-  <!-- 9. GALLERY SECTION -->
-  <section class="section section-bg" id="gallery">
-    <div class="container">
-      <div class="text-center">
-        <span class="section-tag">Our Infrastructure</span>
-        <h2 class="section-title">Explore Laxmi Hospital Campus</h2>
-        <p class="section-subtitle">Take a visual tour of our clean, clinical spaces, advanced diagnostics rooms, and critical emergency units.</p>
-      </div>
-
-      <div class="gallery-grid">
-        <!-- Gallery 1 -->
-        <div class="gallery-item">
-          <svg viewBox="0 0 300 220" class="gallery-img" style="background:#E2E8F0;">
-            <rect x="0" y="0" width="300" height="220" fill="#0B4F93" opacity="0.1"/>
-            <circle cx="150" cy="110" r="40" fill="#0B4F93" opacity="0.3"/>
-            <text x="95" y="115" fill="#0B4F93" font-size="12" font-weight="800">RECEPTION & WAITING</text>
-          </svg>
-          <div class="gallery-overlay">
-            <h4>Modern Patient Reception</h4>
-          </div>
-        </div>
-
-        <!-- Gallery 2 -->
-        <div class="gallery-item">
-          <svg viewBox="0 0 300 220" class="gallery-img" style="background:#EBF4FC;">
-            <rect x="0" y="0" width="300" height="220" fill="#10B981" opacity="0.1"/>
-            <circle cx="150" cy="110" r="40" fill="#10B981" opacity="0.3"/>
-            <text x="105" y="115" fill="#0E7490" font-size="12" font-weight="800">LEVEL-3 ICU BEDS</text>
-          </svg>
-          <div class="gallery-overlay">
-            <h4>Intensive Care Unit (ICU)</h4>
-          </div>
-        </div>
-
-        <!-- Gallery 3 -->
-        <div class="gallery-item">
-          <svg viewBox="0 0 300 220" class="gallery-img" style="background:#ECFDF5;">
-            <rect x="0" y="0" width="300" height="220" fill="#EF4444" opacity="0.1"/>
-            <circle cx="150" cy="110" r="40" fill="#EF4444" opacity="0.3"/>
-            <text x="90" y="115" fill="#991B1B" font-size="12" font-weight="800">MODULAR OPERATION THEATRE</text>
-          </svg>
-          <div class="gallery-overlay">
-            <h4>Modular Operation Theatre (OT)</h4>
-          </div>
-        </div>
-
-        <!-- Gallery 4 -->
-        <div class="gallery-item">
-          <svg viewBox="0 0 300 220" class="gallery-img" style="background:#FFFBEB;">
-            <rect x="0" y="0" width="300" height="220" fill="#F59E0B" opacity="0.1"/>
-            <circle cx="150" cy="110" r="40" fill="#F59E0B" opacity="0.3"/>
-            <text x="100" y="115" fill="#92400E" font-size="12" font-weight="800">ADVANCED AMBULANCE</text>
-          </svg>
-          <div class="gallery-overlay">
-            <h4>GPS-Tracked Ambulance Fleet</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- 10. HEALTH BLOG SECTION -->
   <section class="section" id="blog">
@@ -827,10 +738,7 @@
         <!-- Article 1 -->
         <div class="blog-card">
           <div class="blog-card-img-wrapper">
-            <svg viewBox="0 0 300 200" style="background:#FEE2E2;width:100%;height:100%;">
-              <rect width="100%" height="100%" fill="#FEE2E2"/>
-              <text x="50" y="105" fill="#991B1B" font-size="16" font-weight="800">DENGUE MANAGEMENT</text>
-            </svg>
+            <img src="assets/images/blog-dengue.png" alt="Dengue Management" class="blog-card-img" loading="lazy" decoding="async">
             <span class="blog-card-tag">General Medicine</span>
           </div>
           <div class="blog-card-content">
@@ -840,6 +748,10 @@
             </div>
             <h3><a href="blog/dengue-symptoms.html">Dengue Symptoms, Prevention & Platelet Management</a></h3>
             <p>Understand standard guidelines for managing Dengue fever in Uttar Pradesh, monitoring warning triggers, and avoiding self-medication dangers.</p>
+            <div class="blog-card-tip">
+              <i class="fas fa-lightbulb"></i>
+              <span><strong>Health Tip:</strong> Prevent mosquito breeding by clearing standing water around your home and wear protective clothing.</span>
+            </div>
             <a href="blog/dengue-symptoms.html" class="blog-card-link">Read Full Guide <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
@@ -847,10 +759,7 @@
         <!-- Article 2 -->
         <div class="blog-card">
           <div class="blog-card-img-wrapper">
-            <svg viewBox="0 0 300 200" style="background:#ECFDF5;width:100%;height:100%;">
-              <rect width="100%" height="100%" fill="#ECFDF5"/>
-              <text x="60" y="105" fill="#065F46" font-size="16" font-weight="800">PREGNANCY GUIDE</text>
-            </svg>
+            <img src="assets/images/blog-pregnancy.png" alt="Pregnancy Guide" class="blog-card-img" loading="lazy" decoding="async">
             <span class="blog-card-tag">Obstetrics & Gynecology</span>
           </div>
           <div class="blog-card-content">
@@ -860,6 +769,10 @@
             </div>
             <h3><a href="blog/pregnancy-care.html">Healthy Pregnancy Care Tips: First Trimster to Labor</a></h3>
             <p>A comprehensive clinical timeline mapping maternal nutrition targets, required vaccine dates, and early markers of high-risk pregnancy.</p>
+            <div class="blog-card-tip">
+              <i class="fas fa-lightbulb"></i>
+              <span><strong>Health Tip:</strong> Plan regular antenatal health checkups and maintain a healthy, nutrient-rich diet rich in iron and calcium.</span>
+            </div>
             <a href="blog/pregnancy-care.html" class="blog-card-link">Read Full Guide <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
@@ -867,19 +780,20 @@
         <!-- Article 3 -->
         <div class="blog-card">
           <div class="blog-card-img-wrapper">
-            <svg viewBox="0 0 300 200" style="background:#EBF4FC;width:100%;height:100%;">
-              <rect width="100%" height="100%" fill="#EBF4FC"/>
-              <text x="65" y="105" fill="#1E40AF" font-size="16" font-weight="800">CHILD IMMUNIZATION</text>
-            </svg>
+            <img src="assets/images/blog-child.png" alt="Child Immunization" class="blog-card-img" loading="lazy" decoding="async">
             <span class="blog-card-tag">Pediatrics</span>
           </div>
           <div class="blog-card-content">
             <div class="blog-card-meta">
               <span><i class="far fa-calendar"></i> May 15, 2026</span>
-              <span><i class="far fa-user"></i> Dr. Priya Bansal</span>
+              <span><i class="far fa-user"></i> Dr. Paras Rajput</span>
             </div>
             <h3><a href="blog/child-health-tips.html">Newborn Vaccination & Essential Nutrition Guides</a></h3>
             <p>Important guidelines detailing standard pediatric vaccination timings, physical developmental charts, and infantile allergy precautions.</p>
+            <div class="blog-card-tip">
+              <i class="fas fa-lightbulb"></i>
+              <span><strong>Health Tip:</strong> Adhere strictly to the vaccination chart schedule given by your pediatrician to build strong immunity.</span>
+            </div>
             <a href="blog/child-health-tips.html" class="blog-card-link">Read Full Guide <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
@@ -921,7 +835,7 @@
               <div class="booking-info-icon"><i class="fas fa-headset"></i></div>
               <div class="booking-info-text">
                 <h4>24/7 Patient Care Hotline</h4>
-                <p>Dial +91 99999 99999 for physical help anytime.</p>
+                <p>Dial +91 7078221122 for physical help anytime.</p>
               </div>
             </div>
           </div>
@@ -994,8 +908,8 @@
       <h2>Do You Have A Life-Threatening Crisis?</h2>
       <p>Laxmi Hospital's dynamic Emergency Triage center responds to highway accidents, cardiac arrests, stroke warnings, and critical pregnancies. Our ALS ambulance fleet dispatched instantly.</p>
       <div class="emergency-cta-btn-group">
-        <a href="tel:+919999988888" class="btn btn-emergency" style="font-size:1.2rem;padding:16px 36px;"><i class="fas fa-ambulance"></i> DISPATCH AMBULANCE: +91 99999 88888</a>
-        <a href="tel:+915612244444" class="btn btn-outline" style="border-color:var(--white);color:var(--white);font-size:1.2rem;padding:16px 36px;"><i class="fas fa-phone-alt"></i> ER DESK: +91 5612 244444</a>
+        <a href="tel:+917078221122" class="btn btn-emergency" style="font-size:1.2rem;padding:16px 36px;"><i class="fas fa-ambulance"></i> DISPATCH AMBULANCE: +91 7078221122</a>
+        <a href="tel:+917078221122" class="btn btn-outline" style="border-color:var(--white);color:var(--white);font-size:1.2rem;padding:16px 36px;"><i class="fas fa-phone-alt"></i> ER DESK: +91 7078221122</a>
       </div>
     </div>
   </section>
@@ -1031,7 +945,7 @@
               <div class="contact-info-icon"><i class="fas fa-map-marked-alt"></i></div>
               <div class="contact-info-text">
                 <h4>Our Address</h4>
-                <p>Near Bypass Road, National Highway 2, Firozabad, Uttar Pradesh - 283203, India</p>
+                <p>Nagla Bari, Firozabad, Uttar Pradesh</p>
               </div>
             </div>
 
@@ -1039,7 +953,7 @@
               <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
               <div class="contact-info-text">
                 <h4>Hotlines & OPD</h4>
-                <p>OPD: +91 99999 99999<br>Tel: +91 5612 244444</p>
+                <p>OPD: +91 7078221122<br>Helpline: 05612-297700</p>
               </div>
             </div>
 
@@ -1072,11 +986,7 @@
     <div class="container footer-grid">
       <div class="footer-column">
         <div class="footer-logo">
-          <div class="footer-logo-icon"><i class="fas fa-plus-square"></i></div>
-          <div class="footer-logo-text">
-            <h3>LAXMI HOSPITAL</h3>
-            <span>Multi-Speciality Care</span>
-          </div>
+          <img src="assets/images/logo-white.png" alt="Laxmi Hospital Logo" class="footer-logo-img" decoding="async">
         </div>
         <p class="footer-about-text">Laxmi Multi-Speciality Hospital is Firozabad's premier destination for critical trauma relief, orthopedic surgery, neonatal care, and professional outpatient consultations.</p>
         <div class="footer-hours-card" id="hospital-status-footer">
@@ -1087,39 +997,51 @@
       <div class="footer-column">
         <h3>Quick Links</h3>
         <div class="footer-links">
+          <a href="index.html"><i class="fas fa-chevron-right"></i> Home Page</a>
           <a href="about.html"><i class="fas fa-chevron-right"></i> About Our Hospital</a>
           <a href="departments.html"><i class="fas fa-chevron-right"></i> Medical Specialties</a>
           <a href="doctors.html"><i class="fas fa-chevron-right"></i> Senior Doctors List</a>
           <a href="appointment.html"><i class="fas fa-chevron-right"></i> Online Booking OPD</a>
-          <a href="blog.html"><i class="fas fa-chevron-right"></i> Health Articles Portal</a>
-          <a href="contact.html"><i class="fas fa-chevron-right"></i> Reach Us / Map</a>
+          <a href="blog.html"><i class="fas fa-chevron-right"></i> Health Blog</a>
+          <a href="faq.html"><i class="fas fa-chevron-right"></i> Frequently Asked Questions (FAQ)</a>
+          <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us / Reach Us</a>
         </div>
       </div>
 
       <div class="footer-column">
         <h3>Our Specialties</h3>
         <div class="footer-links">
-          <a href="departments/general-medicine.html"><i class="fas fa-chevron-right"></i> General Medicine</a>
-          <a href="departments/gynecology.html"><i class="fas fa-chevron-right"></i> Gynecology (Maternal)</a>
-          <a href="departments/pediatrics.html"><i class="fas fa-chevron-right"></i> Pediatrics (Child care)</a>
-          <a href="departments/orthopedics.html"><i class="fas fa-chevron-right"></i> Orthopedics & Joints</a>
-          <a href="departments/emergency-care.html"><i class="fas fa-chevron-right"></i> Emergency 24/7 Ward</a>
-          <a href="departments/icu.html"><i class="fas fa-chevron-right"></i> Level-3 ICU unit</a>
+          <a href="departments/general-medicine.html"><i class="fas fa-chevron-right"></i> Medicine</a>
+          <a href="departments/orthopedics.html"><i class="fas fa-chevron-right"></i> Orthopedic</a>
+          <a href="departments/general-surgery.html"><i class="fas fa-chevron-right"></i> General Surgery</a>
+          <a href="departments/pediatrics.html"><i class="fas fa-chevron-right"></i> Pediatric</a>
+          <a href="departments/urology.html"><i class="fas fa-chevron-right"></i> Urology</a>
+          <a href="departments/gastrology.html"><i class="fas fa-chevron-right"></i> Gastrology</a>
+          <a href="departments/ent.html"><i class="fas fa-chevron-right"></i> ENT</a>
+          <a href="departments/icu.html"><i class="fas fa-chevron-right"></i> Critical Care</a>
+          <a href="departments/trauma-care.html"><i class="fas fa-chevron-right"></i> Trauma Care</a>
+          <a href="departments/joint-replacement.html"><i class="fas fa-chevron-right"></i> Joint Replacement</a>
         </div>
       </div>
 
       <div class="footer-column">
         <h3>Emergency Support</h3>
         <p class="footer-about-text" style="margin-bottom:16px;">We have advanced cardiac life support (ALS) ambulances standing by in major nodes around Firozabad district.</p>
-        <div style="background-color:rgba(239, 68, 68, 0.1);border:1px solid rgba(239,68,68,0.2);padding:16px;border-radius:var(--radius-md);">
-          <span style="display:block;font-size:0.75rem;font-weight:700;color:var(--emergency);text-transform:uppercase;margin-bottom:4px;"><i class="fas fa-bullhorn"></i> Dispatch hotline</span>
-          <a href="tel:+919999988888" style="font-size:1.15rem;font-weight:800;color:var(--white);"><i class="fas fa-phone-alt"></i> +91 99999 88888</a>
+        <div style="background-color:rgba(239, 68, 68, 0.1);border:1px solid rgba(239,68,68,0.2);padding:16px;border-radius:var(--radius-md);display:flex;flex-direction:column;gap:8px;">
+          <div>
+            <span style="display:block;font-size:0.75rem;font-weight:700;color:var(--emergency);text-transform:uppercase;margin-bottom:2px;"><i class="fas fa-bullhorn"></i> Dispatch Hotline</span>
+            <a href="tel:+917078221122" style="font-size:1.15rem;font-weight:800;color:var(--white);"><i class="fas fa-phone-alt"></i> +91 7078221122</a>
+          </div>
+          <div style="border-top:1px dashed rgba(255,255,255,0.1);padding-top:6px;">
+            <span style="display:block;font-size:0.75rem;font-weight:700;color:var(--emergency);text-transform:uppercase;margin-bottom:2px;"><i class="fas fa-phone-alt"></i> Helpline Number</span>
+            <a href="tel:05612297700" style="font-size:1.15rem;font-weight:800;color:var(--white);"><i class="fas fa-phone-alt"></i> 05612-297700</a>
+          </div>
         </div>
       </div>
     </div>
     
     <div class="container footer-bottom">
-      <p>&copy; 2026 Laxmi Hospital, Firozabad. All rights reserved. Managed under clinical ethics protocols.</p>
+      <p>&copy; 2026 Laxmi Hospital, Firozabad. All rights reserved. Managed under clinical ethics protocols. | <a href="admin.html" style="color:var(--text-muted);text-decoration:underline;">Admin Portal</a></p>
       <div style="display:flex;gap:20px;">
         <a href="#about" style="hover:color:var(--white);">Terms of Use</a>
         <a href="#about" style="hover:color:var(--white);">Privacy Policy</a>
@@ -1131,13 +1053,13 @@
   <!-- FLOATING INTERACTIVE WIDGETS -->
   <div class="floating-actions">
     <!-- Floating Emergency Hotline -->
-    <a href="tel:+919999988888" class="floating-btn floating-btn-emergency" id="emergency-float-btn">
+    <a href="tel:+917078221122" class="floating-btn floating-btn-emergency" id="emergency-float-btn">
       <i class="fas fa-phone-alt"></i>
       <span class="floating-tooltip">Emergency Call (24x7)</span>
     </a>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/919999999999?text=Hello%20Laxmi%20Hospital%2C%20I%20want%20to%20know%20if%20OPD%20is%20active%20today." target="_blank" class="floating-btn floating-btn-whatsapp" id="whatsapp-float-btn">
+    <a href="https://wa.me/917078221122?text=Hello%20Laxmi%20Hospital%2C%20I%20want%20to%20know%20if%20OPD%20is%20active%20today." target="_blank" class="floating-btn floating-btn-whatsapp" id="whatsapp-float-btn">
       <i class="fab fa-whatsapp"></i>
       <span class="floating-tooltip">Chat on WhatsApp</span>
     </a>
@@ -1180,8 +1102,8 @@
   </div>
 
   <!-- JavaScript Modules -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/appointment.js"></script>
+  <script src="assets/js/main.js?v=1.4.3"></script>
+  <script src="assets/js/appointment.js?v=1.4.3"></script>
   <script src="assets/js/chat.js"></script>
 
 </body>
