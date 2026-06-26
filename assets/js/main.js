@@ -1277,11 +1277,31 @@ function initDynamicContent() {
   }
 
   // Load from LocalStorage
-  const doctorsList = safeParseLocalStorage('laxmi_doctors', []);
-  const reviewsList = safeParseLocalStorage('laxmi_reviews', []);
-  const departmentsList = safeParseLocalStorage('laxmi_departments', []);
-  const blogsList = safeParseLocalStorage('laxmi_blog', []);
-  const packagesList = safeParseLocalStorage('laxmi_packages', []);
+  let doctorsList = safeParseLocalStorage('laxmi_doctors', []);
+  if (doctorsList.length === 0) {
+    doctorsList = defaultDoctors;
+    localStorage.setItem('laxmi_doctors', JSON.stringify(defaultDoctors));
+  }
+  let reviewsList = safeParseLocalStorage('laxmi_reviews', []);
+  if (reviewsList.length === 0) {
+    reviewsList = defaultReviews;
+    localStorage.setItem('laxmi_reviews', JSON.stringify(defaultReviews));
+  }
+  let departmentsList = safeParseLocalStorage('laxmi_departments', []);
+  if (departmentsList.length === 0) {
+    departmentsList = defaultDepartments;
+    localStorage.setItem('laxmi_departments', JSON.stringify(defaultDepartments));
+  }
+  let blogsList = safeParseLocalStorage('laxmi_blog', []);
+  if (blogsList.length === 0) {
+    blogsList = defaultBlogs;
+    localStorage.setItem('laxmi_blog', JSON.stringify(defaultBlogs));
+  }
+  let packagesList = safeParseLocalStorage('laxmi_packages', []);
+  if (packagesList.length === 0) {
+    packagesList = defaultPackages;
+    localStorage.setItem('laxmi_packages', JSON.stringify(defaultPackages));
+  }
 
   // Self-healing database injection/updates for doctors
   let docListModified = false;
