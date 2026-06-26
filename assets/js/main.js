@@ -1436,6 +1436,19 @@ function initDynamicContent() {
   // Self-healing database blogs sync
   if (blogsList.length > 0) {
     let blogsListModified = false;
+    
+    // Ensure all default blogs exist and are active
+    defaultBlogs.forEach(defaultBlog => {
+      const existing = blogsList.find(b => b.id === defaultBlog.id);
+      if (!existing) {
+        blogsList.push(defaultBlog);
+        blogsListModified = true;
+      } else if (!existing.isActive) {
+        existing.isActive = true;
+        blogsListModified = true;
+      }
+    });
+
     blogsList.forEach(b => {
       if (b.authorId === 'dr-sneha-singh') {
         b.authorId = 'dr-lata-rajput';
