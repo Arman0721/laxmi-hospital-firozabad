@@ -1771,6 +1771,7 @@ function initDynamicContent() {
             <a href="${articleLink}" class="blog-card-link">Read Full Guide <i class="fas fa-arrow-right"></i></a>
           </div>
         `;
+        blogGrid.appendChild(card);
       });
     }
   }
