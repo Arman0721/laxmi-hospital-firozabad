@@ -11,8 +11,8 @@ def bump_cache_parameters(file_path):
 
     # Define replacement patterns to increment versions
     replacements = [
-        # style.css -> bump to v=1.3.2
-        (r'style\.css(?:\?v=[a-zA-Z0-9\.\-_]+)?', 'style.css?v=1.3.2'),
+        # style.css -> bump to v=1.3.3
+        (r'style\.css(?:\?v=[a-zA-Z0-9\.\-_]+)?', 'style.css?v=1.3.3'),
         # admin.css -> bump to v=1.1.1
         (r'admin\.css(?:\?v=[a-zA-Z0-9\.\-_]+)?', 'admin.css?v=1.1.1'),
         # main.js -> bump to v=1.4.6
