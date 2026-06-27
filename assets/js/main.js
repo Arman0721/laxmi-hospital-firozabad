@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroSlider();
   initPromoPopup();
   initDoctorsCarousel();
+  initResponsiveTables();
 });
 
 /* --- Sticky Header --- */
@@ -1898,3 +1899,17 @@ window.addEventListener('storage', (e) => {
     initDoctorsCarousel();
   }
 });
+
+/* --- Responsive Tables Wrapper --- */
+function initResponsiveTables() {
+  const tables = document.querySelectorAll('table');
+  tables.forEach(table => {
+    if (table.classList.contains('admin-table')) return;
+    if (!table.parentElement.classList.contains('table-responsive')) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'table-responsive';
+      table.parentNode.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    }
+  });
+}
