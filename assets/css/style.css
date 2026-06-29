@@ -2491,31 +2491,51 @@ footer .footer-column:last-child p + div a:hover {
     padding-bottom: 44.43%;
   }
   
-  /* Footer hybrid responsive layout */
+  /* Short, compact 2-column footer layout */
+  footer {
+    padding: 32px 0 20px 0;
+  }
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px 24px;
+    gap: 24px 16px;
+    margin-bottom: 24px;
   }
   .footer-column:first-child {
-    grid-column: 1 / -1;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    padding-bottom: 28px;
+    grid-column: span 1;
+    border-bottom: none;
+    padding-bottom: 0;
   }
   .footer-column:last-child {
-    grid-column: 1 / -1;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 28px;
+    grid-column: span 1;
+    border-top: none;
+    padding-top: 0;
+  }
+  .footer-about-text {
+    display: none;
+  }
+  .footer-column h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  .footer-logo {
+    margin-bottom: 12px;
+  }
+  .footer-hours-card {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    gap: 6px;
   }
   footer .footer-column:last-child p + div {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 12px !important;
+    gap: 8px !important;
   }
   footer .footer-column:last-child p + div > div:last-child {
-    border-top: none !important;
-    border-left: 1px dashed rgba(255, 255, 255, 0.15) !important;
-    padding-top: 0 !important;
-    padding-left: 16px !important;
+    border-left: none !important;
+    border-top: 1px dashed rgba(255, 255, 255, 0.15) !important;
+    padding-left: 0 !important;
+    padding-top: 8px !important;
   }
   
   /* Spacing adjustments on mobile/tablets */
@@ -2603,31 +2623,25 @@ footer .footer-column:last-child p + div a:hover {
   
   /* Compact footer styles on small screens */
   .footer-grid {
-    gap: 32px 16px;
-  }
-  .footer-column h3 {
-    font-size: 1rem;
-    margin-bottom: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 12px;
+    margin-bottom: 20px;
   }
   .footer-links a {
-    font-size: 0.8rem;
+    font-size: 0.775rem;
     gap: 4px;
   }
-  .footer-about-text {
-    font-size: 0.8rem;
-    line-height: 1.6;
-  }
   footer .footer-column:last-child p + div {
-    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 10px !important;
+    gap: 6px !important;
   }
-  footer .footer-column:last-child p + div > div:last-child {
-    border-left: none !important;
-    border-top: 1px dashed rgba(255, 255, 255, 0.15) !important;
-    padding-left: 0 !important;
-    padding-top: 12px !important;
+  footer .footer-column:last-child p + div a {
+    font-size: 0.95rem !important;
   }
   
-  .footer-bottom { flex-direction: column; text-align: center; gap: 16px; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 12px; }
   .footer-bottom div { justify-content: center; }
   
   .floating-actions { bottom: 20px; right: 20px; }
